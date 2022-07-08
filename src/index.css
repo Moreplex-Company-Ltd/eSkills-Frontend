@@ -7,9 +7,24 @@
 
 footer ul{
   @apply hover:underline hover:decoration-gold hover:text-gold
-
 }
 
 footer ul{
   @apply pl-4 sm:pl-0
+}
+
+
+.hero-section-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)),
+    url('assets/images/banner1-handpot.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero-section-1-web {
+  background-image : url('assets/images/banner1-handpot.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
