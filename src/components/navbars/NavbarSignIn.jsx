@@ -8,11 +8,11 @@ const NavbarSignIn = () => {
   return (
     <React.Fragment>
     
-    <nav className="w-screen bg-primaryBlue fixed border-gray-200 px-2 sm:px-4 py-2.5 ">
+    <nav className="w-screen bg-primaryBlue fixed border-gray-200 px-2 sm:px-4 py-2.5  z-10">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <div className='flex justify-between items-center space-x-6'>
           <Link to="/" className="flex items-center">
-            <img src={logo} className="mr-3 h-10 sm:h-10" alt="Moreplex Logo" />
+            <img src={logo} className="mr-3 h-9 sm:h-9" alt="Moreplex Logo" />
           </Link>
 
           <div className='hidden md:flex'>
@@ -37,7 +37,7 @@ const NavbarSignIn = () => {
       
       <div className="flex md:order-2">
           <button type="button" className=" text-white hover:text-white border border-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:bg-white font-medium rounded text-sm px-3 sm:px-5 py-0 sm:py-2 text-center mr-2">
-            <Link to='/signin'>Get started</Link>
+            <Link to='/signin'>My Account</Link>
           </button>
           <button data-collapse-toggle="mobile-menu-4" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  " aria-controls="mobile-menu-4" aria-expanded="false">
           <span className="sr-only">Open main menu</span>
