@@ -19,7 +19,6 @@ footer ul{
     url('assets/images/banner1-handpot.jpg');
     background-size: cover;
     background-position: center;
-
 }
 
 .hero-section-1-web {
@@ -27,4 +26,9 @@ footer ul{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.interest-selected {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)),
+    url('assets/images/banner1-handpot.jpg');
 }

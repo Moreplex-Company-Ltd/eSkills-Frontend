@@ -30,8 +30,23 @@ const Interests = () => {
                 </div>
             </div>
 
+            {/* desktop; display 3, 4 */}
+            <section className='hidden sm:flex py-10 px-2  flex-col items-center gap-4 '>
+                <div className='flex flex-wrap gap-5'>
+                    <CategoryInterest id='cat1' />
+                    <CategoryInterest id='cat2' />
+                    <CategoryInterest id='cat4' />
+                </div>
+                <div className='flex flex-wrap gap-5'>
+                    <CategoryInterest id='cat3' />
+                    <CategoryInterest id='cat5' />
+                    <CategoryInterest id='cat6' />
+                    <CategoryInterest id='cat7' />
+                </div>
+            </section>
 
-            <section className='py-10 px-2  flex flex-col items-center gap-4 '>
+            {/* mobile; display 2,3,3 */}
+            <section className='sm:hidden  py-10 px-2  flex flex-col items-center gap-4 '>
                 <div className='flex flex-wrap'>
                     <CategoryInterest id='cat1' />
                     <CategoryInterest id='cat2' />
@@ -46,6 +61,8 @@ const Interests = () => {
                     <CategoryInterest id='cat7' />
                 </div>
             </section>
+
+
 
             <section className='my-6 flex items-center justify-center'>
                 <button className='rounded bg-gold text-primaryBlue font-bold px-8 py-2'>Continue</button>

@@ -8,7 +8,7 @@ const NavbarSignIn = () => {
   return (
     <React.Fragment>
     
-    <nav className="w-screen bg-primaryBlue fixed border-gray-200 px-2 sm:px-4 py-2.5 ">
+    <nav className="w-screen bg-primaryBlue fixed border-gray-200 px-2 sm:px-4 py-2.5  z-10">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <div className='flex justify-between items-center space-x-6'>
           <Link to="/" className="flex items-center">
