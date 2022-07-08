@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbars/Navbar'
 import { Link } from 'react-router-dom'
 import ContinueWithGoogle from '../components/Accounts/ContinueWithGoogle'
 import ContinueWithFacebook from '../components/Accounts/ContinueWithFacebook';
@@ -118,7 +118,7 @@ const SignUp = () => {
         </div>
         <div className='pt-[100px]'></div>
         </section>
-        <Footer></Footer>
+        <Footer />
 
 
 

@@ -1,11 +1,14 @@
 import React from 'react';
+import Footer from '../components/Footer';
 
-import Navbar from '../components/Navbar';
+
+import NavbarDefault from '../components/navbars/NavbarDefault';
 
 const Home = () => {
   return (
     <React.Fragment>
-        <Navbar />
+        <NavbarDefault />
+        <Footer />
     </React.Fragment>
   )
 }
