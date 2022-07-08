@@ -12,7 +12,7 @@ const NavbarDefault = () => {
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <div className='flex justify-between items-center space-x-6'>
           <Link to="/" className="flex items-center">
-            <img src={logo} className="mr-3 h-10 sm:h-10" alt="Moreplex Logo" />
+            <img src={logo} className="mr-3 h-9 sm:h-9" alt="Moreplex Logo" />
           </Link>
 
           <div className='hidden md:flex'>
