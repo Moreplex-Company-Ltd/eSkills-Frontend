@@ -3,9 +3,17 @@ import soapImage from '../assets/images/soap3.jpg'
 
 const CourseCard = () => {
   return (
-    <div className="h-30 flex flex-col text-gray-900 bg-white rounded-xl shadow">
+    <div className="h-30 flex flex-col text-gray-900 bg-white rounded-xl drop-shadow-md hover:shadow-xl">
           <div className="rounded-lg bg-white shadow-md">
-            <img src={soapImage} className="w-full rounded-t-lg" alt='imgg' />
+          <div className='flex justify-center items-center'>
+          <svg 
+            className='absolute fill-black '
+            xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 20 30" >
+              <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path><path d="m9 17 8-5-8-5z"></path>
+          </svg>
+          <img src={soapImage} className="w-full rounded-t-lg" alt='imgg' />
+          </div>
+            
             <div className="px-3 py-2">
               <div className='flex justify-between'>
                 <p className='font-poppins font-extrabold text-xs'><span className='font-extrabold'>13,734</span> students</p>
