@@ -2,27 +2,48 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/moreplex-logo-white.png'
+import avatar from '../../assets/images/background2.jpeg'
+import { useState } from 'react';
 
 
 const NavbarSignIn = () => {
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
+
+
   return (
     <React.Fragment>
     
     <nav className="w-screen bg-primaryBlue fixed border-gray-200 px-2 sm:px-4 py-2.5  z-10">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+      <div className="flex flex-wrap justify-between items-center mx-2">
+
+        {/* Group 1; left menu hamburger on mobile */}
+        <button id="mobileMenuDropdown" data-dropdown-toggle="mobileMenuDropdown" data-collapse-toggle="mobileMenuDropdown" type="button" className="inline-flex items-center  text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200  " aria-controls="mobile-menu-4" aria-expanded="false" onClick={()=>setOpenMobileMenu(prev=>!prev)}>
+          <span className="sr-only">Open main menu</span>
+          {openMobileMenu ? 
+          <svg className="w-7 h-7 focus:bg-transparent text-white fill-white"  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg> :
+          <svg className="w-7 h-7 focus:bg-transparent text-white fill-white"  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
+          }
+        </button>
+
+          
+
+        {/* Group 2; only Brand logo on mobile */}
         <div className='flex justify-between items-center space-x-6'>
+          {/* Logo Brand */}
           <Link to="/" className="flex items-center">
             <img src={logo} className="mr-3 h-9 sm:h-9" alt="Moreplex Logo" />
           </Link>
 
-          <div className='hidden md:flex'>
-            <h1 className='text-white font-bold'>Learning Paths</h1>
-          </div>
-
+          {/* First Nav */}
+          <button className='hidden md:flex justify-between items-center'>
+            <h1 className='text-white font-bold'>Categories
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+            </h1>
+          </button>
           
+          {/* Search box */}
           <div className='hidden md:flex pl-2'>
           <form className='w-[50vh] '>   
-            {/* <label for="default-search" className="text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label> */}
             <div className="relative">
                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -31,20 +52,21 @@ const NavbarSignIn = () => {
             </div>
           </form>
           </div>
-        
+      
         </div>
       
-      
-      <div className="flex md:order-2">
-          <button type="button" className=" text-white hover:text-white border border-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:bg-white font-medium rounded text-sm px-3 sm:px-5 py-0 sm:py-2 text-center mr-2">
-            <Link to='/signin'>My Account</Link>
+        {/* Group 3; only user avatar on mobile */}
+        <div className="flex justify-between items-center">
+          <button type='button' className='hidden md:block mr-6 justify-center text-white'>
+            Notifications
           </button>
-          <button data-collapse-toggle="mobile-menu-4" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  " aria-controls="mobile-menu-4" aria-expanded="false">
-          <span className="sr-only">Open main menu</span>
-          <svg className="w-6 h-6 focus:bg-transparent text-white fill-white"  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
-          <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-        </button>
-      </div>
+          
+            <button type="button" className="flex  text-sm  rounded-full md:mr-0 border border-white  focus:ring-white" id="user-menu-button" aria-expanded="false"  data-dropdown-toggle="dropdown">
+              <span className="sr-only">Open user menu</span>
+              <img className="w-9 h-9 sm:w-10 sm:h-10  rounded-full ring-white object-cover" src={avatar} alt="userphoto" />
+            </button>
+            
+        </div>
       {/* <div className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
         <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
           <li>
@@ -62,7 +84,28 @@ const NavbarSignIn = () => {
         </ul>
       </div> */}
       </div>
-    </nav>`
+
+      {/* mobile menu */}
+      {openMobileMenu && (
+        <div id="mobileMenuDropdown" className=" md:hidden w-full divide-y  divide-gray-600 ">
+          <ul className=" text-lg py-5 text-white dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+            
+            <li className='flex justify-center'>
+            <form className='w-[80%] block '>   
+            <div className="relative">
+                <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <input type="search" id="default-search" className="block p-1.5 pl-10 w-full text-sm text-white bg-transparent rounded border border-white  focus:border-none" placeholder="Search Courses, Workshops... " />
+            </div>
+          </form>
+            </li>
+          </ul>
+          
+      </div>
+      )}
+
+    </nav>
 
 
     </React.Fragment>
