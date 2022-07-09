@@ -9,7 +9,7 @@ const Interests = () => {
   return (
     <React.Fragment>
         <NavbarSignIn />
-        <section className=''>
+        <section className='bg-grayBackground'>
             {/* desktop */}
             <div className=" h-80 hidden sm:flex  hero-section-1  items-center justify-center">
                 <div className=" p-4 text-white">
@@ -22,7 +22,7 @@ const Interests = () => {
 
             {/* mobile */}
             <div className=" h-60 sm:hidden hero-section-1 flex items-center justify-center">
-                <div className=" p-4 mt-5 text-white">
+                <div className=" p-4 mt-14 text-white">
                 <h1 className="text-2xl sm:text-4xl font-bold sm:font-bold text-center text-gold">Tell us what interests you!</h1>
                     <p className="text-lg sm:text-2xl  font-medium text-center text-white mt-5">
                         We have amazing things for you. <br/> Favourite a few to help us better understand your interests
