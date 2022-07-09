@@ -23,7 +23,7 @@ const CourseCard = () => {
               <h2 className="mb-1 text-lg font-medium text-primaryBlue">Introduction to Soap Branding: Branding the Perfect Soap</h2>
 
               <div className='flex justify-between items-end my-0'>
-                <p className="text-base text-center text-gold">Prince Baff </p>
+                <p className="text-base text-center text-gold">Prince Baffour </p>
                 
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                   width="50" height="30"
