@@ -28,9 +28,9 @@ const Landing = () => {
             </section>
 
             <section className='py-5 sm:py-10 '>
-                {/* desktop & tab */}
+                {/* desktop*/}
                 <div className='hidden lg:flex justify-center items-center'>
-                    {/* text section */}
+                    {/* text col left */}
                     <div className='w-[40%]  px-10 sm:pl-24'>
                         <h1 className='text-xl sm:text-4xl tracking-tight font-bold mb-4 text-primaryBlue'>Designed for optimal productivity</h1>
                         <p className='mb-4 text-sm md:text-2xl font-light'>With AI based Course Recommendation, you see only what you like best. 
@@ -38,44 +38,22 @@ const Landing = () => {
                         </p>
                         <button className='mt-10 rounded text-white font-bold bg-gold px-4 py-2'><Link to='/about'>Learn More</Link></button>
                     </div>
-
-                    {/* image section */}
+                    {/* image col right */}
                     <div className='w-[70%]'>
                         <img src={screenshot1} className='object-cover shadow-lg rounded-bl-lg rounded-tl-lg hover:shadow-2xl'  alt='screenshot1' />
                     </div>
                 </div>
 
 
-
-                {/* mobile */}
+                {/* mobile and tab and other smaller screens */}
                 <div className='w-full lg:hidden justify-center items-center'>
-                    
                     <h1 className='mb-4 text-2xl tracking-tight font-bold text-primaryBlue text-center px-10 md:text-4xl md:mb-6'>Designed for optimal productivity</h1>
-                        
                     <img src={screenshot1} className='object-cover shadow-lg hover:shadow-2xl'  alt='screenshot1' />
-                    
                     <div className='text-center px-5 md:px-20 mt-5'>
                         <p className='mb-4 text-lg md:text-2xl'>With AI based Course Recommendation, you see only what you like best. 
                             <br/>What else can we offer you?
                         </p>
                         <button className='mb-5 rounded text-white font-bold bg-gold px-4 py-2'><Link to='/about'>Learn More</Link></button>
-                    </div>
-                </div>
-
-
-                <div className='hidden justify-center items-center'>
-                    {/* text section */}
-                    <div className='w-[40%]  pl-10 sm:pl-24 pr-5'>
-                        <h1 className='text-xl sm:text-4xl tracking-tight font-bold mb-4 text-primaryBlue'>Designed for optimal productivity</h1>
-                        <p className='mb-4 text-sm md:text-2xl font-light'>With AI based Course Recommendation, you see only what you like best. 
-                            <br/>What else can we offer you?
-                        </p>
-                        <button className='mt-10 rounded text-white font-bold bg-gold px-4 py-2'><Link to='/about'>Learn More</Link></button>
-
-                    </div>
-                    {/* image section */}
-                    <div className='w-[70%]'>
-                        <img src={screenshot1} className='object-cover shadow-lg rounded-bl-lg rounded-tl-lg hover:shadow-2xl'  alt='screenshot1' />
                     </div>
                 </div>
             </section>
