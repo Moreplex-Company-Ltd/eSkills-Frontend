@@ -36,9 +36,8 @@ const NavbarSignedIn = () => {
 
           {/* First Nav */}
           <button className='hidden md:flex justify-between items-center'>
-            <h1 className='text-white font-bold'>Categories
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-            </h1>
+            <h1 className='text-white font-bold'>Categories</h1>
+            <svg className="w-4 5-4 ml-1 text-white font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
           
           {/* Search box */}

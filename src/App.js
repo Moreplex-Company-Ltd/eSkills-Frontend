@@ -10,6 +10,7 @@ import {
 import Home from "./pages/Home";
 import Interests from "./pages/Interests";
 import Landing from "./pages/Landing";
+import Page404 from "./pages/Page404";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 
@@ -24,6 +25,8 @@ function App() {
           <Route exact path="/interests" element={<Interests />} />
           
           <Route exact path="/home" element={<Home />} />
+
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </Router>
    </React.Fragment>

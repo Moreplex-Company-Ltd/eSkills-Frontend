@@ -36,10 +36,10 @@ const NavbarDefault = () => {
 
           {/* First Nav */}
           <button className='hidden md:flex justify-between items-center'>
-            <h1 className='text-white font-bold'>Categories
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-            </h1>
+            <h1 className='text-white font-bold'>Categories</h1>
+            <svg className="w-4 5-4 ml-1 text-white font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
+          
           
           {/* Search box */}
           <div className='hidden md:flex pl-2'>
@@ -64,7 +64,7 @@ const NavbarDefault = () => {
             <Link to='/signup'>Sign Up</Link>
           </button>
         </div>
-        
+
       {/* <div className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
         <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
           <li>
