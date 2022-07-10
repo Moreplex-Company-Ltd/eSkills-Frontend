@@ -13,6 +13,7 @@ import Landing from "./pages/Landing";
 import Page404 from "./pages/Page404";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import Terms from "./pages/Terms";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           <Route exact path="/interests" element={<Interests />} />
           
           <Route exact path="/home" element={<Home />} />
+
+
+          <Route exact path="/terms" element={<Terms />} />
 
           <Route path="*" element={<Page404 />} />
         </Routes>
