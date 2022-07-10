@@ -3,13 +3,14 @@ import CoursesRowByCategory from '../components/CoursesRowByCategory';
 import Footer from '../components/Footer';
 
 
-import NavbarSignIn from '../components/navbars/NavbarSignIn';
+import NavbarSignedIn from '../components/navbars/NavbarSignedIn';
+import CarouselSections from '../components/sections/CarouselSections';
 
 
 const Home = () => {
   return (
     <React.Fragment>
-      <NavbarSignIn />
+      <NavbarSignedIn />
 
 
       <section className='bg-grayBackground'>
@@ -50,10 +51,17 @@ const Home = () => {
         <CoursesRowByCategory 
           title='Because you love Cosmetic Manufacturing'
         />
-
         <CoursesRowByCategory 
           title='Establish your Business: Marketing Courses to take you to the next level'
         />
+
+
+        <section className='my-5'>
+          <CarouselSections />
+        </section>
+
+
+ 
 
      
       

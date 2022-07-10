@@ -1,14 +1,15 @@
 import React from 'react'
 import Footer from '../components/Footer';
-import NavbarSignIn from '../components/navbars/NavbarSignIn';
+import NavbarSignedIn from '../components/navbars/NavbarSignedIn';
 
 import CategoryInterest from '../components/CategoryInterest';
+import { Link } from 'react-router-dom';
 
 
 const Interests = () => {
   return (
     <React.Fragment>
-        <NavbarSignIn />
+        <NavbarSignedIn />
         <section className='bg-grayBackground'>
             {/* desktop */}
             <div className=" h-80 hidden sm:flex  hero-section-1  items-center justify-center">
@@ -65,7 +66,9 @@ const Interests = () => {
 
 
             <section className='my-6 flex items-center justify-center'>
-                <button className='rounded bg-gold text-primaryBlue font-bold px-8 py-2'>Continue</button>
+                <button className='rounded bg-gold text-primaryBlue font-bold px-8 py-2'>
+                    <Link to='/home'>Continue</Link>
+                </button>
             </section>
             
 

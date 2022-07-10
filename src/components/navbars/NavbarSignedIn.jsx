@@ -6,7 +6,7 @@ import avatar from '../../assets/images/background2.jpeg'
 import { useState } from 'react';
 
 
-const NavbarSignIn = () => {
+const NavbarSignedIn = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
 
@@ -120,4 +120,4 @@ const NavbarSignIn = () => {
   )
 }
 
-export default NavbarSignIn
+export default NavbarSignedIn

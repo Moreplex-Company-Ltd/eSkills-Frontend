@@ -44,3 +44,28 @@ footer ul{
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)),
     url('assets/images/banner1-handpot.jpg');
 }
+
+
+.carousel-1-background {
+  background: linear-gradient(rgba(14, 11, 14, 0.457), rgba(15, 5, 5, 0.8)),
+    url('assets/images/women-laugh.jpg');
+    background-size: cover;
+    background-position: 0% 15%;
+    opacity: 95%;
+}
+
+.carousel-2-background {
+  background: linear-gradient(rgba(14, 11, 14, 0.457), rgba(15, 5, 5, 0.8)),
+    url('assets/images/lady-onphone.jpg');
+    background-size: cover;
+    background-position: top;
+    opacity: 95%;
+}
+
+.carousel-3-background {
+  background: linear-gradient(rgba(14, 11, 14, 0.457), rgba(15, 5, 5, 0.8)),
+    url('assets/images/banner2-ladiesLap.jpg');
+    background-size: cover;
+    background-position: 0% 30%;
+    opacity: 95%;
+}
