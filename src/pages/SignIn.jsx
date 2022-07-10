@@ -66,7 +66,7 @@ const SignIn = () => {
                 </div>
             
                 <div className=" mt-3">
-                    <SubmitButton  name='Log In'/>
+                    <Link to='/home'><SubmitButton  name='Log In'/></Link>
                     <p className='text-center mt-2'>New User? <Link to='/signUp'><span className='font-bold text-secondaryBlue'>Create an Account</span></Link></p>
                 </div>
             </form>
