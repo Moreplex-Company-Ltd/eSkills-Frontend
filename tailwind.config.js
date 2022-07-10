@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: [
+    "./src/**/*.{html,js,jsx}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}"
+],
   theme: {
     screens: {
       sm: '480px',  //640
@@ -25,10 +28,11 @@ module.exports = {
       primaryBlue: '#020B5E',
       secondaryBlue: '#000C7C',
       grayBackground: '#F5F5F5'
-
-
     },
+    
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

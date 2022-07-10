@@ -42,7 +42,7 @@ const Footer = () => {
         
       </div>
       <hr className='border-gold border-2' />
-      <div className='sm:flex justify-between mt-2 pt-2 pb-10'>
+      <div className='sm:flex justify-between mt-0 pt-2 pb-10'>
         <div>
           <p className='text-center'>&copy; Moreplex Eskills Academy, 2022</p>
         </div>

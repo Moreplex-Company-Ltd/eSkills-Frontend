@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbars/Navbar'
 import { Link } from 'react-router-dom'
 import ContinueWithGoogle from '../components/Accounts/ContinueWithGoogle'
 import ContinueWithFacebook from '../components/Accounts/ContinueWithFacebook';
@@ -21,7 +21,7 @@ const SignUp = () => {
         <Navbar />
 
         <section className="bg-grayBackground   h-full">
-        <div className='flex justify-center items-center w-full h-full pt-40 sm:px-10'>
+        <div className='flex justify-center items-center w-full h-full pt-8 sm:pt-40 sm:px-10'>
         <div className="mx-auto rounded bg-white p-10 shadow w-full sm:w-3/4 md:w-3/4 lg:w-1/2">
             <h3 className="text-center text-2xl md:text-3xl font-bold mb-4">Create an Account</h3>
 
@@ -104,9 +104,9 @@ const SignUp = () => {
 
                 
             
-                <div className=" mt-3">
-                    <SubmitButton  name='Create Account'/>
-                    <p className='text-center mt-2'>New User? <Link to='/signin'><span className='font-bold text-secondaryBlue'>Create an Account</span></Link></p>
+                <div className=" mt-3 mb-10 sm:mb-0">
+                    <Link to='/interests'><SubmitButton  name='Create Account'/></Link>
+                    <p className='text-center mt-2'>Already have an Account? <Link to='/signin'><span className='font-bold text-secondaryBlue'>Sign In</span></Link></p>
                 </div>
             </form>
             }
@@ -116,9 +116,9 @@ const SignUp = () => {
         </div>
         
         </div>
-        <div className='pt-[100px]'></div>
+        <div className='pt-0 sm:pt-[100px]'></div>
         </section>
-        <Footer></Footer>
+        <Footer />
 
 
 
