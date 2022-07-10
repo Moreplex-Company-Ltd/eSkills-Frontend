@@ -28,9 +28,9 @@ const Landing = () => {
             </section>
 
             <section className='py-5 sm:py-10 '>
-                {/* desktop & tab */}
+                {/* desktop*/}
                 <div className='hidden lg:flex justify-center items-center'>
-                    {/* text section */}
+                    {/* text col left */}
                     <div className='w-[40%]  px-10 sm:pl-24'>
                         <h1 className='text-xl sm:text-4xl tracking-tight font-bold mb-4 text-primaryBlue'>Designed for optimal productivity</h1>
                         <p className='mb-4 text-sm md:text-2xl font-light'>With AI based Course Recommendation, you see only what you like best. 
@@ -38,44 +38,22 @@ const Landing = () => {
                         </p>
                         <button className='mt-10 rounded text-white font-bold bg-gold px-4 py-2'><Link to='/about'>Learn More</Link></button>
                     </div>
-
-                    {/* image section */}
+                    {/* image col right */}
                     <div className='w-[70%]'>
                         <img src={screenshot1} className='object-cover shadow-lg rounded-bl-lg rounded-tl-lg hover:shadow-2xl'  alt='screenshot1' />
                     </div>
                 </div>
 
 
-
-                {/* mobile */}
+                {/* mobile and tab and other smaller screens */}
                 <div className='w-full lg:hidden justify-center items-center'>
-                    
                     <h1 className='mb-4 text-2xl tracking-tight font-bold text-primaryBlue text-center px-10 md:text-4xl md:mb-6'>Designed for optimal productivity</h1>
-                        
                     <img src={screenshot1} className='object-cover shadow-lg hover:shadow-2xl'  alt='screenshot1' />
-                    
                     <div className='text-center px-5 md:px-20 mt-5'>
                         <p className='mb-4 text-lg md:text-2xl'>With AI based Course Recommendation, you see only what you like best. 
                             <br/>What else can we offer you?
                         </p>
                         <button className='mb-5 rounded text-white font-bold bg-gold px-4 py-2'><Link to='/about'>Learn More</Link></button>
-                    </div>
-                </div>
-
-
-                <div className='hidden justify-center items-center'>
-                    {/* text section */}
-                    <div className='w-[40%]  pl-10 sm:pl-24 pr-5'>
-                        <h1 className='text-xl sm:text-4xl tracking-tight font-bold mb-4 text-primaryBlue'>Designed for optimal productivity</h1>
-                        <p className='mb-4 text-sm md:text-2xl font-light'>With AI based Course Recommendation, you see only what you like best. 
-                            <br/>What else can we offer you?
-                        </p>
-                        <button className='mt-10 rounded text-white font-bold bg-gold px-4 py-2'><Link to='/about'>Learn More</Link></button>
-
-                    </div>
-                    {/* image section */}
-                    <div className='w-[70%]'>
-                        <img src={screenshot1} className='object-cover shadow-lg rounded-bl-lg rounded-tl-lg hover:shadow-2xl'  alt='screenshot1' />
                     </div>
                 </div>
             </section>
@@ -86,6 +64,20 @@ const Landing = () => {
                 <CoursesRowByCategory title='Popular Courses' />
 
                 </Carousel>
+            </section>
+
+            <section class="bg-white ">
+                <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                    <div class="font-light text-gray-500 sm:text-lg ">
+                        <h2 class="mb-4 text-3xl tracking-tight font-bold text-primaryBlue md:text-4xl  ">Learn anywhere, anytime</h2>
+                        <p class="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
+                        <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <img class="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1" />
+                        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2" />
+                    </div>
+                </div>
             </section>
 
         </section>
