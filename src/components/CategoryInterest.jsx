@@ -10,9 +10,11 @@ import catCosmetic from '../assets/images/cat-cosmetics.jpg'
 import catOrganicSoap from '../assets/images/organic-soap.jpg'
 
 
-const CategoryInterest = ({catTitle, id}) => {
+const CategoryInterest = ({id, selectedCats, setSelectedCats}) => {
     const [img, setImg] = useState('');
     const [title, setTitle] = useState('');
+
+    const [selected, setSelected] = useState(false)
 
     useEffect(() => {
      
@@ -58,21 +60,31 @@ const CategoryInterest = ({catTitle, id}) => {
         return () => setCatImage()
     }, [id]);
 
+
+    
+
     const handleOnClick = (id) => {
-        console.log(id)
+        console.log(id);
+        setSelected(prev=>!prev)
+        
+
     }
+
+  
+
+    
 
     
   return (
-    <div className='h-30 w-[115px] sm:w-[200px] sm:h-[220px] flex-col  hover:border hover:border-red-500 ' onClick={handleOnClick}>
+    <div className='h-30 w-[115px] sm:w-[200px] sm:h-[220px] flex-col' onClick={handleOnClick}>
         <div className='flex justify-center  '>
         <button className=''>
-            {/* <div className='interest-selected  mb-1 w-20 h-20 sm:w-[150px] sm:h-[150px] rounded-full border border-gold object-cover opacity-50   flex justify-center items-center absolute'>
+            { selected && <div className='interest-selected  mb-1 w-20 h-20 sm:w-[150px] sm:h-[150px] rounded-full border border-gold object-cover opacity-50   flex justify-center items-center absolute'>
                 <svg  viewBox="0 0 20 30 " className='fill-white w-14 h-14 sm:w-20 sm:h-20 ' xmlns="http://www.w3.org/2000/svg"  >
                     
                     <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path>
                 </svg>
-            </div> */}
+            </div>}
             <img className="mb-1 w-20 h-20 sm:w-[150px] sm:h-[150px] rounded-full border border-gold object-cover" src={img} alt={`${title}`} />
         </button>
         </div>
