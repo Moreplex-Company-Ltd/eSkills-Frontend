@@ -1,8 +1,10 @@
+import { Carousel } from 'flowbite-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CourseCard from '../components/CourseCard'
 import Footer from '../components/Footer'
 import NavbarSignedIn from '../components/navbars/NavbarSignedIn'
+import WorkshopCard from '../components/WorkshopCard'
 
 const AllCourses = () => {
   return (
@@ -66,7 +68,7 @@ const AllCourses = () => {
                 </div>
 
                 {/* right main content */}
-                <div className='flex-1 pl-4  text-2xl font-bold  h-screen overflow-y-auto '>
+                <div className='hidden sm:block flex-1 pl-4  text-2xl font-bold  h-screen overflow-y-auto '>
                     <div className='mb-20'>
                     <div className='flex justify-between items-start'>
                     <h1 className='mb-5 text-primaryBlue font-bold text-xl sm:text-3xl'>Popular Courses</h1>
@@ -87,8 +89,38 @@ const AllCourses = () => {
                     <h1 className='mb-5 text-primaryBlue font-bold text-xl sm:text-3xl'>Popular Workshops</h1>
                     <button className='px-5 py-1.5 text-black font-bold text-sm border border-black rounded hover:bg-gray-100'>View All</button>
                     </div>
-                    <div className='w-full justify-between gap-6'>
-                        <CourseCard />
+                    <div className='w-full space-y-8'>
+                        <WorkshopCard />
+                        <WorkshopCard />
+                    </div>
+                    </div>
+                </div>
+
+                {/* right main content -> mobile */}
+                <div className='sm:hidden flex-1 text-2xl font-bold  border border-red-700'>
+                    <div className='container mx-auto pr-16 mb-20'>
+                    <div className='flex justify-between items-start'>
+                    <h1 className='mb-5 text-primaryBlue font-bold text-xl sm:text-3xl'>Popular Courses</h1>
+                    <button className='px-5 py-1.5 text-black font-bold text-sm border border-black rounded hover:bg-gray-100'>View All</button>
+                    </div>
+                    <div className='flex border border-red-400'>
+                        <Carousel>
+                            <CourseCard />
+                            <CourseCard />
+                            <CourseCard />
+                            <CourseCard />
+                        </Carousel>
+                    </div>
+                    </div>
+
+                    <div className='mb-5 container mx-auto pr-16'>
+                    <div className='flex justify-between items-start'>
+                    <h1 className='mb-5 text-primaryBlue font-bold text-xl sm:text-3xl'>Popular Workshops</h1>
+                    <button className='px-5 py-1.5 text-black font-bold text-sm border border-black rounded hover:bg-gray-100'>View All</button>
+                    </div>
+                    <div className='w-full space-y-8'>
+                        <WorkshopCard />
+                        <WorkshopCard />
                     </div>
                     </div>
                 </div>
