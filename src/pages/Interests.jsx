@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../components/Footer';
 import NavbarSignedIn from '../components/navbars/NavbarSignedIn';
 
@@ -7,6 +7,11 @@ import { Link } from 'react-router-dom';
 
 
 const Interests = () => {
+    const [selectedCats, setSelectedCats] = useState([])
+
+
+    console.log('selectedCats ==> ', selectedCats)
+
   return (
     <React.Fragment>
         <NavbarSignedIn />
@@ -34,32 +39,32 @@ const Interests = () => {
             {/* desktop; display 3, 4 */}
             <section className='hidden sm:flex py-10 px-2  flex-col items-center gap-4 '>
                 <div className='flex flex-wrap gap-5'>
-                    <CategoryInterest id='cat1' />
-                    <CategoryInterest id='cat2' />
-                    <CategoryInterest id='cat4' />
+                    <CategoryInterest id='cat1' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat2' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat4' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
                 </div>
                 <div className='flex flex-wrap gap-5'>
-                    <CategoryInterest id='cat3' />
-                    <CategoryInterest id='cat5' />
-                    <CategoryInterest id='cat6' />
-                    <CategoryInterest id='cat7' />
+                    <CategoryInterest id='cat3' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat5' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat6' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat7' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
                 </div>
             </section>
 
             {/* mobile; display 2,3,3 */}
             <section className='sm:hidden  py-10 px-2  flex flex-col items-center gap-4 '>
                 <div className='flex flex-wrap'>
-                    <CategoryInterest id='cat1' />
-                    <CategoryInterest id='cat2' />
+                    <CategoryInterest id='cat1' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat2' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
                 </div>
                 <div className='flex flex-wrap'>
-                    <CategoryInterest id='cat3' />
-                    <CategoryInterest id='cat4' />
-                    <CategoryInterest id='cat5' />
+                    <CategoryInterest id='cat3' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat4' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat5' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
                 </div>
                  <div className='flex flex-wrap'>
-                    <CategoryInterest id='cat6' />
-                    <CategoryInterest id='cat7' />
+                    <CategoryInterest id='cat6' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
+                    <CategoryInterest id='cat7' selectedCats={selectedCats} setSelectedCats={setSelectedCats} />
                 </div>
             </section>
 
