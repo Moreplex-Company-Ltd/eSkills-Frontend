@@ -17,6 +17,13 @@ const CategoryInterest = ({id, selectedCats, setSelectedCats}) => {
     const [selected, setSelected] = useState(false)
 
     useEffect(() => {
+        if(selected){
+            // console.log('add to array')
+            setSelectedCats([...selectedCats, id])
+        }else {
+            // console.log('remove from array')
+            setSelectedCats(selectedCats.filter(catId=>catId!==id))
+        }
      
         const setCatImage = () => {
             switch (id) {
@@ -58,7 +65,7 @@ const CategoryInterest = ({id, selectedCats, setSelectedCats}) => {
         setCatImage()
         // useEffect cleanup
         return () => setCatImage()
-    }, [id]);
+    }, [id, selected]);
 
 
     
