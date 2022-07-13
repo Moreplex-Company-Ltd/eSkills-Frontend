@@ -1,7 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import soapImage from '../assets/images/soap3.jpg'
 
+
+const courseTitle = 'Introduction to Soap Branding: Branding the Perfect Soap'
+const courseAuthor = 'Prince Baff'
+
+
 const CourseCard = () => {
+  
   return (
     <div className="h-30 flex flex-col text-gray-900 bg-white rounded-xl drop-shadow-md hover:shadow-xl">
           <div className="rounded-lg bg-white shadow-md">
@@ -20,10 +27,13 @@ const CourseCard = () => {
                 <p className='font-poppins font-extrabold text-xs'>1h 35m</p>
               </div>
 
-              <h2 className="mb-1 text-lg font-medium text-primaryBlue">Introduction to Soap Branding: Branding the Perfect Soap</h2>
+              <h2 className="mb-1 text-lg font-medium text-primaryBlue">
+                <Link to='/course'>{courseTitle}</Link>
+                
+              </h2>
 
               <div className='flex justify-between items-end my-0'>
-                <p className="text-base text-center text-gold">Prince Baffour </p>
+                <p className="text-base text-center text-gold">{courseAuthor} </p>
                 
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                   width="50" height="30"
