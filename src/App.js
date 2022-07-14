@@ -5,6 +5,8 @@ import {
   Route
 } from "react-router-dom";
 import AllCourses from "./pages/AllCourses";
+import AllCourses2 from "./pages/AllCourses2";
+import CoursePage from "./pages/CoursePage";
 
 
 // import all pages
@@ -31,6 +33,9 @@ function App() {
           
           <Route exact path="/home" element={<Home />} />
           <Route exact path="/courses" element={<AllCourses />} />
+          <Route exact path="/allcourses" element={<AllCourses2 />} />
+
+          <Route exact path="/course" element={<CoursePage />} />
 
 
           <Route exact path="/terms" element={<Terms />} />

@@ -11,9 +11,9 @@ const Home = () => {
   return (
     <React.Fragment>
       <NavbarSignedIn />
+      <div className='bg-grayBackground'>
 
-
-      <section className='bg-grayBackground'>
+      <section>
           {/* desktop */}
           <div className="h-[400px] hidden sm:flex flex-col hero-section-main justify-center items-center ">
                 <div className=" p-4 text-white justify-center">
@@ -73,7 +73,7 @@ const Home = () => {
 
 
 
-
+        </div>
         <Footer />
     </React.Fragment>
   )
