@@ -10,7 +10,7 @@
 }
 
 body {
-  background: "#f4f4f4";
+  @apply bg-gray-100
 }
 
 
