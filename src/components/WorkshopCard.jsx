@@ -1,14 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import soapImage from '../assets/images/soap3.jpg'
+import ladyonPhone from '../assets/images/lady-onphone.jpg'
 
-
-const courseTitle = 'Introduction to Soap Branding: Branding the Perfect Soap'
-const courseAuthor = 'Prince Baff'
-
-
-const CourseCard = () => {
-  
+const WorkshopCard = () => {
   return (
     <div className="h-30 flex flex-col text-gray-900 bg-white rounded-xl drop-shadow-md hover:shadow-xl">
           <div className="rounded-lg bg-white shadow-md">
@@ -18,7 +11,7 @@ const CourseCard = () => {
             xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 20 30" >
               <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path><path d="m9 17 8-5-8-5z"></path>
           </svg>
-          <img src={soapImage} className="w-full rounded-t-lg" alt='imgg' />
+          <img src={ladyonPhone} className="w-full h-60 object-cover rounded-t-lg" alt='imgg' />
           </div>
             
             <div className="px-3 py-2">
@@ -27,13 +20,10 @@ const CourseCard = () => {
                 <p className='font-poppins font-extrabold text-xs'>1h 35m</p>
               </div>
 
-              <h2 className="mb-1 text-lg font-medium text-primaryBlue">
-                <Link to='/course'>{courseTitle}</Link>
-                
-              </h2>
+              <h2 className="mb-1 text-lg font-medium text-primaryBlue">Business Branding and Marketing 101: From Zero to Hero</h2>
 
               <div className='flex justify-between items-end my-0'>
-                <p className="text-base text-center text-gold">{courseAuthor} </p>
+                <p className="text-base text-center text-gold">Prince Baffour </p>
                 
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                   width="50" height="30"
@@ -50,4 +40,4 @@ const CourseCard = () => {
   )
 }
 
-export default CourseCard
+export default WorkshopCard
