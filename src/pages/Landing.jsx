@@ -78,7 +78,8 @@ const Landing = () => {
                     <div className="font-light text-gray-500 sm:text-lg ">
                         <h2 className="mb-4 text-3xl tracking-tight font-bold text-primaryBlue md:text-4xl  ">Learn anywhere, anytime</h2>
                         <p className="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
-                        <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
+                        <p className='mb-10'>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
+                        <button className='mb-5 rounded text-white font-bold bg-gold px-4 py-2'><Link to='/signin'>Get Started for Free</Link></button>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mt-8">
                         <img className="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1" />
@@ -89,7 +90,7 @@ const Landing = () => {
 
         </section>
         
-        <div className='mt-6'></div>
+        
         <Footer />
     </React.Fragment>
   )
