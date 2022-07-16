@@ -9,7 +9,7 @@ import WorkshopCard from '../components/WorkshopCard'
 const AllCourses = () => {
   return (
     <React.Fragment>
-        <main className='bg-grayBackground'>
+        <main>
         <NavbarSignedIn />
             <section>
                 {/* desktop */}
@@ -59,7 +59,7 @@ const AllCourses = () => {
                     {/* Workshops */}
                     <h1 className='font-bold text-xl'>Workshops</h1>
                     <hr />
-                    <ul className='mt-0'>
+                    <ul className='mt-0 pb-5'>
                         <li className='font-normal rounded pl-2 py-2 hover:bg-gray-300 hover:pl-3'>New Workshops</li>
                         <li className='font-normal rounded pl-2 py-2 hover:bg-gray-300 hover:pl-3'>Popular Workshops</li>
                         <li className='font-normal rounded pl-2 py-2 hover:bg-gray-300 hover:pl-3'>Trending Workshops</li>
