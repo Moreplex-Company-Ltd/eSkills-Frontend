@@ -4,9 +4,12 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import About from "./pages/About";
 import AllCourses from "./pages/AllCourses";
 import AllCourses2 from "./pages/AllCourses2";
+import CategoryPage from "./pages/CategoryPage";
 import CoursePage from "./pages/CoursePage";
+import DetailedCategoryPage from "./pages/DetailedCategoryPage";
 
 
 // import all pages
@@ -32,6 +35,8 @@ function App() {
           <Route exact path="/interests" element={<Interests />} />
           
           <Route exact path="/home" element={<Home />} />
+          <Route exact path="/categories" element={<CategoryPage />} />
+          <Route exact path="/categories/:catID" element={<DetailedCategoryPage />} />
           <Route exact path="/courses" element={<AllCourses />} />
           <Route exact path="/allcourses" element={<AllCourses2 />} />
 
@@ -39,6 +44,7 @@ function App() {
 
 
           <Route exact path="/terms" element={<Terms />} />
+          <Route exact path="/about" element={<About />} />
 
           <Route path="*" element={<Page404 />} />
         </Routes>

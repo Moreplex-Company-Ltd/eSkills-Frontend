@@ -13,7 +13,7 @@ const NavbarSignedIn = () => {
   return (
     <React.Fragment>
     
-    <nav className="w-screen bg-primaryBlue fixed border-gray-200 px-2 sm:px-4 py-2.5  z-10">
+    <nav className="w-screen bg-primaryBlue fixed border-gray-200 px-2 sm:px-4 py-2.5  z-20">
       <div className="flex flex-wrap justify-between items-center mx-2">
 
         {/* Group 1; left menu hamburger on mobile */}

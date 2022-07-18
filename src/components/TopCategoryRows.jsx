@@ -10,7 +10,7 @@ const TopCategoryRows = (props) => {
           <div className='container mx-auto px-10'>
             <h1 className='mb-4 text-2xl tracking-tight font-bold text-primaryBlue md:text-4xl text-center'>Top Categories</h1>
           </div>
-          <div className='container mx-auto py-5 px-10  '>
+          <div className='container mx-auto pt-5 px-10  '>
             <div className='grid grid-cols-1'>
                 <Carousel>
                     <CategoryCard id='cat1'/>
