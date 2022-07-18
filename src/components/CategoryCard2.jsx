@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 import soapImage from '../assets/images/soap3.jpg'
 import cleaningAgent from '../assets/images/cat-cleaningAgents.jpg'
@@ -8,11 +9,9 @@ import catBranding from '../assets/images/banner2-ladiesLap.jpg'
 import catSoap from '../assets/images/cat-soaps.jpg'
 import catCosmetic from '../assets/images/cat-cosmetics.jpg'
 import catOrganicSoap from '../assets/images/organic-soap.jpg'
-import { Link } from 'react-router-dom'
 // import ladyOnPhone from  '../assets/images/lady-onphone.jpg'
 
-
-const CategoryCard = ({id}) => {
+const CategoryCard2 = ({id}) => {
     const [img, setImg] = useState('');
     const [title, setTitle] = useState('');
 
@@ -62,20 +61,30 @@ const CategoryCard = ({id}) => {
     }, [id]);
 
 
-
   return (
-    <Link to={`/categories/${id}`}>
-        <div className="h-fit flex flex-col text-gray-900 bg-white rounded-xl drop-shadow-md hover:shadow-xl">
-        <div className="rounded-lg bg-white shadow-md">
-        <img src={img} className="w-full rounded-t-lg h-44" alt={`${title}`} />
-        
-        <div className="px-2 py-1 bg-primaryBlue">
-            <h2 className="mb-1 text-lg font-medium text-white text-center">{title}</h2>              
-        </div>
-        </div>
-    </div>
-    </Link>
+        <Link className="h-52 relative block bg-black group overflow-hidden rounded-lg" to={`/categories/${id}`}>
+            <img
+                className="absolute inset-0 object-cover w-full h-full transition-opacity opacity-75  group-hover:opacity-50 rounded-lg"
+                src={img}
+                alt={img}
+            />
+            <div className="relative p-8">
+                <div>
+                    <h1 className='text-white font-extrabold text-xl'>{title}</h1>
+                </div>
+
+                <div className="mt-10">
+                <div
+                    className="transition-all transform translate-y-8 opacity-0  group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                    <p className="text-sm text-white">
+                        brief Cat description
+                    </p>
+                </div>
+                </div>
+            </div>
+        </Link>
   )
 }
 
-export default CategoryCard
+export default CategoryCard2

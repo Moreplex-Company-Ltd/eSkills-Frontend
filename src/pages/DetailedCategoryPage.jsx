@@ -1,4 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
+import Footer from '../components/Footer'
+import NavbarSignedIn from '../components/navbars/NavbarSignedIn'
+import { useParams } from 'react-router-dom'
 
 import soapImage from '../assets/images/soap3.jpg'
 import cleaningAgent from '../assets/images/cat-cleaningAgents.jpg'
@@ -8,18 +11,21 @@ import catBranding from '../assets/images/banner2-ladiesLap.jpg'
 import catSoap from '../assets/images/cat-soaps.jpg'
 import catCosmetic from '../assets/images/cat-cosmetics.jpg'
 import catOrganicSoap from '../assets/images/organic-soap.jpg'
-import { Link } from 'react-router-dom'
+import DynamicCategoryHero from '../components/uis/DynamicCategoryHero'
+import CoursesRowByCategory from '../components/CoursesRowByCategory'
+import { Carousel } from 'flowbite-react'
 // import ladyOnPhone from  '../assets/images/lady-onphone.jpg'
 
-
-const CategoryCard = ({id}) => {
+const DetailedCategoryPage = (props) => {
+    const {catID } = useParams()
+    
     const [img, setImg] = useState('');
     const [title, setTitle] = useState('');
 
     useEffect(() => {
      
         const setCatImage = () => {
-            switch (id) {
+            switch (catID) {
                 case 'cat1':
                     setImg(catOrganicSoap)
                     setTitle('Organic Skin Care Manufacturing')
@@ -59,23 +65,31 @@ const CategoryCard = ({id}) => {
         setCatImage()
         // useEffect cleanup
         return () => setCatImage()
-    }, [id]);
-
-
+    }, [catID]);
 
   return (
-    <Link to={`/categories/${id}`}>
-        <div className="h-fit flex flex-col text-gray-900 bg-white rounded-xl drop-shadow-md hover:shadow-xl">
-        <div className="rounded-lg bg-white shadow-md">
-        <img src={img} className="w-full rounded-t-lg h-44" alt={`${title}`} />
+    <React.Fragment>
+        <NavbarSignedIn />
+        <DynamicCategoryHero 
+            catName={title}
+            catImage={img}
+        />
         
-        <div className="px-2 py-1 bg-primaryBlue">
-            <h2 className="mb-1 text-lg font-medium text-white text-center">{title}</h2>              
-        </div>
-        </div>
-    </div>
-    </Link>
+
+        <section className='mt-10'>
+            <div className='container mx-auto px-10 sm:px-0'>
+            <h1 className='text-lg tracking-tight  sm:text-2xl text-primaryBlue font-bold'>{`${title} Courses`}</h1>
+            </div>
+            <Carousel>
+                <CoursesRowByCategory />
+                <CoursesRowByCategory />
+            </Carousel>
+            
+        </section>
+
+        <Footer />
+    </React.Fragment>
   )
 }
 
-export default CategoryCard
+export default DetailedCategoryPage

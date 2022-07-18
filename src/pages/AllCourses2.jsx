@@ -28,6 +28,7 @@ const AllCourses2 = () => {
                     </div>
                 </div>
             </section>
+            
             <section className='hidden sm:block container mx-auto py-20'>
                 
                 <div className='container mx-auto  w-full '>
@@ -62,7 +63,7 @@ const AllCourses2 = () => {
                 </div>
                 <div className='flex items-start justify-end gap-5'>
                     <button className='px-5 py-1.5 text-black font-bold text-sm border border-black rounded hover:bg-primaryBlue hover:text-white'>Clear Filter</button>
-                    <button className='px-5 py-1.5 font-bold text-sm border border-black rounded bg-primaryBlue text-white'>Search</button>
+                    <button className='px-5 py-1.5 font-bold text-sm border border-black rounded bg-primaryBlue text-white hover:bg-opacity-90'>Search</button>
                 </div>
                 </div>
 

@@ -7,8 +7,8 @@ const CourseChapterNav = ({title, duration, isWatched}) => {
 
   return (
     <React.Fragment>
-        <button className={`w-full font-normal px-5 py-2 border border-transparent hover:border hover:border-blue-600 ${isWatched && 'bg-gray-300'}`}>
-            <div className='flex justify-between items-start border border-red-600'>
+        <button className={`w-full font-normal px-5 py-2 border border-transparent hover:border hover:border-white rounded ${isWatched && 'bg-gray-300'}`}>
+            <div className='flex justify-between items-start '>
                 <div className=''>
                     <h1 className='font-semibold'>{title}</h1>
                     <p className='font-thin text-left text-sm'>1h 34m</p>
