@@ -26,10 +26,10 @@ const CoursePage = () => {
 
         <section className='h-full w-full'>
             <div className='border pt-12  text-black border-red-700'>
-                <div className='mt-16'>
+                <div className='pt-16 bg-gray-400'>
                     <h1 className='ml-5 text-2xl tracking-tight font-bold  md:text-4xl'>{courseTitle}</h1>
-                    <h2 className='ml-5 mb-2'>Author: {courseAuthor}</h2>
-                    <hr />
+                    <h2 className='ml-5 mb-2'>Taught By: <span className='text-secondaryBlue italic font-extrabold'>{courseAuthor}</span></h2>
+                    {/* <hr /> */}
                     {/* <div className='flex mx-10 justify-between mt-5'>
                         <button className='px-4 py-1 rounded bg-gray-100 border border-secondaryBlue hover:bg-gray-200'>Prev</button>
                         <button className='px-4 py-1 rounded bg-gray-100 border border-secondaryBlue hover:bg-gray-200'>Next</button>
@@ -39,10 +39,14 @@ const CoursePage = () => {
                         <div className='w-[75%] border border-black'>
                             <img src={ladyOnPhone} alt='immg' />
                         </div>
-                        <div className='w-[25%] py-5 border border-black'>
-                            <p className='text-center font-bold mb-10'>9 Chapters (2h:45m)</p>
-                        <div className=' pb-5  w-full'>
+                        <div className='w-[25%] py-5 '>
+                            <p className='text-center font-extrabold text-lg mb-4'>9 Sections (2h:45m)</p>
+                        <div className=' pb-0  w-full'>
                             <CourseChapterNav  isWatched={true} />
+                            <CourseChapterNav  />
+                            <CourseChapterNav  />
+                            <CourseChapterNav  />
+                            <CourseChapterNav  />
                             <CourseChapterNav  />
                             <CourseChapterNav  />
                             
