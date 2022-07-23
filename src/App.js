@@ -17,6 +17,7 @@ import Home from "./pages/Home";
 import Interests from "./pages/Interests";
 import Landing from "./pages/Landing";
 import Page404 from "./pages/Page404";
+import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Terms from "./pages/Terms";
@@ -39,6 +40,7 @@ function App() {
           <Route exact path="/categories/:catID" element={<DetailedCategoryPage />} />
           <Route exact path="/courses" element={<AllCourses />} />
           <Route exact path="/allcourses" element={<AllCourses2 />} />
+          <Route exact path="/profile" element={<Profile /> } />
 
           <Route exact path="/course" element={<CoursePage />} />
 

@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DefaultHero = ({heroText, linkText, linkRef}) => {
+const DefaultHero = ({heroText, linkText, linkRef, mH, dH}) => {
+    const desktopheight = dH ? dH : 80;
+    const mobileHeight = mH ? mH :64;
     const mainText = heroText ? heroText :  'Do what you love, Learn what you want, Unlock your truest passions'
     
  
   return (
     <section>
         {/* desktop */}
-        <div className=" h-80 hidden sm:flex  hero-section-1  items-center ">
+        <div className={` h-${desktopheight} hidden sm:flex  hero-section-1  items-center `}>
             <div className="container mx-auto  text-white">
             <h1 className="text-2xl sm:text-4xl font-bold sm:font-bold text-white mt-20">{mainText}</h1>
             {linkText && (
@@ -18,7 +20,7 @@ const DefaultHero = ({heroText, linkText, linkRef}) => {
         </div>
 
         {/* mobile */}
-        <div className=" h-64 sm:hidden hero-section-1 flex items-center justify-center">
+        <div className={` h-${mobileHeight} sm:hidden hero-section-1 flex items-center justify-center`}>
             <div className=" p-4 mt-14 text-white justify-center items-center">
             <h1 className="text-2xl sm:text-4xl font-bold sm:font-bold text-center text-white">{mainText}</h1>
             {linkText && (
