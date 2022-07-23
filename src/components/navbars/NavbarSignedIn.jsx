@@ -39,7 +39,7 @@ const NavbarSignedIn = () => {
           </Link>
 
           {/* First Nav */}
-          <button className='hidden md:flex justify-between items-center'>
+          <button className='hidden md:flex justify-between items-center' onClick={()=>window.location.href = '/categories'}>
             <h1 className='text-white font-bold'>Categories</h1>
             <svg className="w-4 5-4 ml-1 text-white font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
@@ -78,7 +78,7 @@ const NavbarSignedIn = () => {
                 <div className='text-center'>
                   <img className="ml-7 sm:ml-5 w-12 h-12 sm:w-16 sm:h-16 object-center rounded-full ring-white object-cover" src={avatar} alt="userphoto" />
                   <p className='text-sm'>Kofi Mensah</p>
-                  <button className='mt-2 px-3 py-1 sm:py-1.5 bg-primaryBlue text-white rounded hover:opacity-90'>View Profile</button>
+                  <button className='mt-2 px-3 py-1 sm:py-1.5 bg-primaryBlue text-white rounded hover:opacity-90'><Link to='/profile'>View Profile</Link></button>
                 </div>
               </div>
               <hr className='text-gray-500 mt-5 mb-0' />
