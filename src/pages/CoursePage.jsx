@@ -41,7 +41,7 @@ const CoursePage = () => {
                             {/* <img src={ladyOnPhone} alt='immg'  className='object-fill w-full h-full'/> */}
                             <LoadingVideo />
                         </div>
-                        <div className='w-[25%] py-5 '>
+                        <div className='w-[25%] py-0 '>
                             <p className='text-center font-extrabold text-lg mb-4'>9 Sections (2h:45m)</p>
                         <div className=' pb-0  w-full'>
                             <CourseChapterNav  isWatched={true} />
