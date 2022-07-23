@@ -37,7 +37,7 @@ const DynamicCategoryHero = ({catName, catImage}) => {
                 </div>
                 </div>
             </div>
-        </section>
+    </section>
   )
 }
 

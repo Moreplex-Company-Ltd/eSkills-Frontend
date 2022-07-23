@@ -8,6 +8,10 @@ import { useState } from 'react';
 
 const NavbarSignedIn = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [openProfileMenu, setOpenProfileMenu] = useState(false)
+
+
+  
 
 
   return (
@@ -59,13 +63,40 @@ const NavbarSignedIn = () => {
           <button type='button' className='hidden md:block mr-6 justify-center text-white'>
             Notifications
           </button>
-          
-            <button type="button" className="flex  text-sm  rounded-full md:mr-0 border border-white  focus:ring-white" id="user-menu-button" aria-expanded="false"  data-dropdown-toggle="dropdown">
+          {/* rounded-full overflow-hidden border-2 border-purple-500 w-10 h-10 flex justify-center items-center | hover:border-white focus:outline-none focus:border-white */}
+            <div className='relative'>
+            <button type="button" className="flex  text-sm  rounded-full md:mr-0 border-2 border-white overflow-hidden items-center hover:border-white  focus:ring-white focus:border-white" onClick={()=>setOpenProfileMenu(prev=>!prev)}>
               <span className="sr-only">Open user menu</span>
               <img className="w-9 h-9 sm:w-10 sm:h-10  rounded-full ring-white object-cover" src={avatar} alt="userphoto" />
             </button>
+
+            {openProfileMenu && 
+            <>
+            <div className="fixed inset-0 w-full h-screen z-20 bg-black opacity-25" onClick={()=>setOpenProfileMenu(prev=>!prev)}></div>
+            <div className="absolute z-30 right-0 pt-5  bg-gray-100 rounded ">
+              <div className='flex justify-center items-center '>
+                <div className='text-center'>
+                  <img className="ml-7 sm:ml-5 w-12 h-12 sm:w-16 sm:h-16 object-center rounded-full ring-white object-cover" src={avatar} alt="userphoto" />
+                  <p className='text-sm'>Kofi Mensah</p>
+                  <button className='mt-2 px-3 py-1 sm:py-1.5 bg-primaryBlue text-white rounded hover:opacity-90'>View Profile</button>
+                </div>
+              </div>
+              <hr className='text-gray-500 mt-5 mb-0' />
+                <div className=" rounded-lg divide-y divide-gray-200 shadow-lg w-48">
+                    <a href="/l" className="block text-secondaryBlue font-semibold px-4 py-2 | hover:text-white hover:bg-gray-500">My Courses</a>
+                    <a href="/" className="block text-secondaryBlue font-semibold px-4 py-2 | hover:text-white hover:bg-gray-500">Account Settings</a>
+                    <a href="/" className="block text-secondaryBlue font-semibold px-4 py-2 | hover:text-white hover:bg-gray-500">Help</a>
+                    <div className='py-2 text-center'>
+                        <p className='block text-secondaryBlue font-semibold px-4 py-2 | hover:text-white hover:bg-gray-500'>Logout</p>
+                    </div>
+                </div>
+            </div>
+            </>}
             
-        </div>
+            </div>
+                    
+            </div>
+        
       {/* <div className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-4">
         <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
           <li>

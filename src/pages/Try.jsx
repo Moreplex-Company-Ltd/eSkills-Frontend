@@ -10,7 +10,8 @@ const AccordianItem = (props) => {
     // console.log(props.children)
     // set toggleState to opposite of what it was
     setToggleState(prev=>!prev)
-    const header = props.children.filter(prop=>prop.type==='h2');
+    // const header = props.children.filter(prop=>prop.type==='h2');
+    console.log(toggleState)
     
   }
   return (
