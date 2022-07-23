@@ -3,20 +3,21 @@ import { Link } from 'react-router-dom';
 
 import NavbarDefault from '../components/navbars/NavbarDefault'
 import Footer from '../components/Footer'
-import LandingCarouselSections from '../components/sections/LandingCarouselSections'
+// import LandingCarouselSections from '../components/sections/LandingCarouselSections'
 import CoursesRowByCategory from '../components/CoursesRowByCategory'
 import { Carousel } from 'flowbite-react'
 
 import screenshot1 from '../assets/images/screenshot-home.jpg'
 import TopCategoryRows from '../components/TopCategoryRows';
 import LinkButton from '../components/uis/LinkButton';
+import LandingCarouselSections2 from '../components/sections/LandingCarouselSections2';
 
 const Landing = () => {
   return (
     <React.Fragment>
         <NavbarDefault />
         <section className='pt-14'>
-            <LandingCarouselSections />
+            <LandingCarouselSections2 />
             <section className="bg-white ">
                 <div className="py-12 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto lg:px-40 md:px-20  text-center">
