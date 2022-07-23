@@ -55,7 +55,7 @@ footer ul{
     url('assets/images/women-laugh.jpg');
     background-size: cover;
     background-position: 0% 15%;
-    opacity: 95%;
+    opacity: 90%;
 }
 
 .carousel-2-background {
@@ -63,7 +63,7 @@ footer ul{
     url('assets/images/lady-onphone.jpg');
     background-size: cover;
     background-position: top;
-    opacity: 95%;
+    opacity: 90%;
 }
 
 .carousel-3-background {
@@ -71,5 +71,5 @@ footer ul{
     url('assets/images/banner2-ladiesLap.jpg');
     background-size: cover;
     background-position: 0% 30%;
-    opacity: 95%;
+    opacity: 90%;
 }
