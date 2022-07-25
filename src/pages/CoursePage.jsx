@@ -11,6 +11,7 @@ import ReviewsTab from '../components/courseVideoPage/tabs/ReviewsTab';
 import DiscussionsTab from '../components/courseVideoPage/tabs/DiscussionsTab'
 import ResourcesTab from '../components/courseVideoPage/tabs/ResourcesTab';
 import LoadingVideo from '../components/courseVideoPage/LoadingVideo'
+import { Accordion } from 'flowbite-react';
 
 
 const courseTitle = 'Introduction to Soap Branding: Branding the Perfect Soap'
@@ -41,16 +42,18 @@ const CoursePage = () => {
                             {/* <img src={ladyOnPhone} alt='immg'  className='object-fill w-full h-full'/> */}
                             <LoadingVideo />
                         </div>
-                        <div className='w-[25%] py-0 '>
+                        <div className='w-[25%] py-0 h-[560px] overflow-y-scroll '>
                             <p className='text-center font-extrabold text-lg mb-4'>9 Sections (2h:45m)</p>
-                        <div className=' pb-0  w-full'>
-                            <CourseChapterNav  isWatched={true} />
+                        <div className=' pb-0  w-full '>
+                            <CourseChapterNav />
+
+                            {/* <CourseChapterNav  isWatched={true} />
                             <CourseChapterNav  />
                             <CourseChapterNav  />
                             <CourseChapterNav  />
                             <CourseChapterNav  />
                             <CourseChapterNav  />
-                            <CourseChapterNav  />
+                            <CourseChapterNav  /> */}
                             
                         </div>
                         
