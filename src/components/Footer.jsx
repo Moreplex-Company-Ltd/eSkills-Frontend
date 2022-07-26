@@ -43,8 +43,9 @@ const Footer = () => {
       </div>
       <hr className='border-gold border-2' />
       <div className='sm:flex justify-between mt-0 pt-2 pb-10'>
-        <div>
-          <p className='text-center'>&copy; Moreplex Eskills Academy, 2022</p>
+        <div className=''>
+          <p className=' text-center'>&copy; Moreplex Eskills Academy, 2022</p>
+          {/* <p className='text-sm'>Except otherwise stated, contents are licensed under a Creative Commons Attribution 4.0 International license.</p> */}
         </div>
 
         <div className='mt-4 sm:mt-0 flex space-x-2 justify-center '>
