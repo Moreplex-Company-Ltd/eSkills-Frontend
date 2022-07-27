@@ -10,6 +10,7 @@ import AllCourses2 from "./pages/AllCourses2";
 import CategoryPage from "./pages/CategoryPage";
 import CoursePage from "./pages/CoursePage";
 import DetailedCategoryPage from "./pages/DetailedCategoryPage";
+import HelpSupport from "./pages/HelpSupport";
 
 
 // import all pages
@@ -47,6 +48,7 @@ function App() {
 
           <Route exact path="/terms" element={<Terms />} />
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/help" element={<HelpSupport />} />
 
           <Route path="*" element={<Page404 />} />
         </Routes>
