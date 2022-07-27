@@ -10,6 +10,7 @@ import AllCourses2 from "./pages/AllCourses2";
 import CategoryPage from "./pages/CategoryPage";
 import CoursePage from "./pages/CoursePage";
 import DetailedCategoryPage from "./pages/DetailedCategoryPage";
+import HelpSupport from "./pages/HelpSupport";
 
 
 // import all pages
@@ -21,6 +22,7 @@ import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 import Try from "./pages/Try";
 
 function App() {
@@ -46,7 +48,9 @@ function App() {
 
 
           <Route exact path="/terms" element={<Terms />} />
+          <Route exact path="/privacy" element={<Privacy />} />
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/help" element={<HelpSupport />} />
 
           <Route path="*" element={<Page404 />} />
         </Routes>
