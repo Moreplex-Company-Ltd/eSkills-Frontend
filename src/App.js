@@ -22,6 +22,7 @@ import Profile from "./pages/Profile";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 import Try from "./pages/Try";
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
 
 
           <Route exact path="/terms" element={<Terms />} />
+          <Route exact path="/privacy" element={<Privacy />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/help" element={<HelpSupport />} />
 
