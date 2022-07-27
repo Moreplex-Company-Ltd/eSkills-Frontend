@@ -107,7 +107,7 @@ individual business needs.
                 </ul>
 
                 <p className='leading-relaxed mb-1'><span className='font-bold'>Information we automatically collect when you use our Services:</span>  Some Personal Data is automatically collected when you use our Services, such as the following:</p>
-                <ul class='marker:text-secondaryBlue list-outside list-disc ml-10'>
+                <ul class='marker:text-secondaryBlue list-outside list-disc ml-10 mb-9'>
                     <li>IP Address</li>
                     <li>Your activity on the Services. This includes class usage information such as course enrollment and which courses you’ve watched. It also includes community interaction data, such as which members you’re following, your comments, your projects, or project likes.</li>
                     <li>Device identifiers</li>
