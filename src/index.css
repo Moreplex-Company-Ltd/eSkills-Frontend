@@ -73,3 +73,11 @@ footer ul{
     background-position: 0% 30%;
     opacity: 90%;
 }
+
+
+.about-section {
+  background-image : url('assets/images/women-laugh.jpg');
+  background-position: 100% 20%;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
