@@ -96,7 +96,7 @@ individual business needs.
             </p>
             <div className=''>
                 <p className='leading-relaxed mb-1'><span className='font-bold'>Information we collect directly from you:</span> We receive Personal Data directly from you when you provide us with such Personal Data, including without limitation the following:</p>
-                <ul class='marker:text-secondaryBlue list-outside list-disc ml-10 mb-4'>
+                <ul className='marker:text-secondaryBlue list-outside list-disc ml-10 mb-4'>
                     <li>First and last name</li>
                     <li>Email address</li>
                     <li>Gender</li>
@@ -107,7 +107,7 @@ individual business needs.
                 </ul>
 
                 <p className='leading-relaxed mb-1'><span className='font-bold'>Information we automatically collect when you use our Services:</span>  Some Personal Data is automatically collected when you use our Services, such as the following:</p>
-                <ul class='marker:text-secondaryBlue list-outside list-disc ml-10 mb-9'>
+                <ul className='marker:text-secondaryBlue list-outside list-disc ml-10 mb-9'>
                     <li>IP Address</li>
                     <li>Your activity on the Services. This includes class usage information such as course enrollment and which courses you’ve watched. It also includes community interaction data, such as which members you’re following, your comments, your projects, or project likes.</li>
                     <li>Device identifiers</li>
@@ -121,10 +121,32 @@ individual business needs.
                 </ul>
             </div>
 
+            <h1 className='font-bold text-left text-secondaryBlue mb-1'>Sharing of Personal Data</h1>
+            <p className='leading-relaxed mb-1'>We share Personal Data with vendors, third party service providers and agents who work on our behalf and provide us with services related to the purposes described in this Privacy Policy or our Terms of Service. These parties include:</p>
+            <ul className='marker:text-secondaryBlue list-outside list-disc ml-10 mb-2'>
+                <li>Payment processors</li>
+                <li>Fraud prevention service providers</li>
+                <li>Third party providers of advertising services</li>
+                <li>Ad networks and marketing tools</li>
+                <li>Analytics service providers</li>
+                <li>Engineering and development tools</li>
+                <li>Staff augmentation and contract personnel</li>
+                <li>Hosting service providers</li>
+            </ul>
+            <p className='leading-relaxed mb-2'>We also share Personal Data when we believe it is necessary to:</p>
+            <ul className='marker:text-secondaryBlue list-outside list-disc ml-10 mb-2'>
+                <li>Comply with applicable law or respond to valid legal process, including from law enforcement or other government agencies</li>
+                <li>Protect us, our business or our users, for example to enforce our terms of service, prevent spam or other unwanted communications and investigate or protect against fraud</li>
+                <li>Maintain the security of our products and services</li>
+            </ul>
+            <p className='leading-relaxed mb-9'>We also share information with third parties when you give us consent to do so. Furthermore, you acknowledge that we may transfer your Personal Data, and that any acquirer of us or our assets may continue to use your Personal Data, as set forth in this privacy document</p>
+
+
             {/* <h1 className='font-bold text-left text-secondaryBlue mb-1'></h1>
             <p className='leading-relaxed mb-9'>
             
             </p> */}
+
 
             <h1 className='font-bold text-left text-secondaryBlue mb-1'>Storage of personal data</h1>
             <p className='leading-relaxed mb-2'>
