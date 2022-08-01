@@ -4,13 +4,31 @@ import NavbarSignedIn from '../components/navbars/NavbarSignedIn';
 
 import CategoryInterest from '../components/CategoryInterest';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addMyInterest } from '../redux/userSlice';
 
 
 const Interests = () => {
+    const user = useSelector(state=>state.user.isLoggedIn)
+    console.log(user)
+    const dispatch = useDispatch()
     const [selectedCats, setSelectedCats] = useState([])
 
 
-    console.log('selectedCats ==> ', selectedCats)
+    // console.log('selectedCats ==> ', selectedCats)
+
+    const onSubmitHandler = async() => {
+        console.log(selectedCats)
+        const interests = selectedCats.map(interest=>parseInt(interest.slice(-1)));
+        console.log(interests)
+
+        if(!user){
+            window.location.href='/home'
+        }
+
+        const response = await dispatch(addMyInterest({interests: interests})).unwrap();
+        console.log(response)
+    }
 
   return (
     <React.Fragment>
@@ -71,8 +89,8 @@ const Interests = () => {
 
 
             <section className='my-6 flex items-center justify-center'>
-                <button className='rounded bg-gold text-primaryBlue font-bold px-8 py-2'>
-                    <Link to='/home'>Continue</Link>
+                <button className='rounded bg-gold text-primaryBlue font-bold px-8 py-2' onClick={onSubmitHandler}>
+                    Continue
                 </button>
             </section>
             

@@ -28,6 +28,68 @@ export const logInUser = createAsyncThunk("user/login", async (userData) => {
     }
 });
 
+export const signupUser = createAsyncThunk("user/signup", async(userData) => {
+    try {
+        console.log(userData)
+        const response =  await API.post("/auth/signup", userData);
+        console.log(response)
+        const data = {
+            status: response.status,
+            bearerToken: response.data.bearerToken,
+            accessToken: response.data.accessToken
+        }
+        return data;
+        
+    } catch (error) {
+        const data = {
+            status: error.response.status,
+            message: error.response.data.message
+           };
+          return data;
+    }
+})
+
+export const addMyInterest = createAsyncThunk("/user/addInterest", async(intsData)=>{
+    try {
+        console.log(intsData)
+        const response = await API.post('/users/me/interest', intsData);
+        console.log(response)
+        const data = {
+            status: response.status,  //201
+            message : response.data.message
+        }
+        return data;
+
+        
+    } catch (error) {
+        console.log(error.response)
+        const data = {
+            status: error.response.status,
+            message: error.response.data.message
+           };
+          return data;
+    }
+})
+
+export const getMe = createAsyncThunk("/user/me", async()=>{
+    try{
+        const response = await API.get("/users/me");
+        // console.log(response.data.user[0]);
+        const data = {
+            status: response.status,
+            user: response.data.user[0]
+        }
+        return data
+
+    }catch(error){
+        const data = {
+            status: error.response.status,
+            message: error.response.data.message
+        };
+        return data;
+    }
+})
+
 
 
 
@@ -45,6 +107,7 @@ reducers: {
         state.user = {};
         state.isLoggedIn = false;
         localStorage.clear();
+        window.location.href='/'
         },
     
     },
@@ -57,6 +120,14 @@ reducers: {
                 localStorage.setItem("userToken", action.payload.bearerToken);
               }
         
+        });
+        builder.addCase(signupUser.fulfilled, (state, action) => {
+            if (action.payload.status === 200) {
+                const user = jwtDecode(action.payload.bearerToken)
+                console.log(user)
+                state.user = user
+                localStorage.setItem("userToken", action.payload.bearerToken);
+              }
         })
     }
 })

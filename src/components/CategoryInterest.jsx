@@ -71,7 +71,7 @@ const CategoryInterest = ({id, selectedCats, setSelectedCats}) => {
     
 
     const handleOnClick = (id) => {
-        console.log(id);
+        // console.log(id);
         setSelected(prev=>!prev)
         
 

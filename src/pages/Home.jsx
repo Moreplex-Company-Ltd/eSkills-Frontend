@@ -1,13 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import CoursesRowByCategory from '../components/CoursesRowByCategory';
 import Footer from '../components/Footer';
 
 
 import NavbarSignedIn from '../components/navbars/NavbarSignedIn';
 import CarouselSections from '../components/sections/CarouselSections';
+import { getMe } from '../redux/userSlice';
 
 
 const Home = () => {
+    const dispatch = useDispatch()
+    const isLoggedIn = useSelector(state=>state.user.isLoggedIn)
+    // const [user, setUser] = useState();
+    const [interestCats, setInterestCats] = useState({});
+
+
+    useEffect(() => {
+  
+        const getUser = async () => {
+            const response = await dispatch(getMe()).unwrap();
+            // console.log(response)
+            if(response.status===200){
+                // setUser(response.user)
+                setInterestCats(response.user.interests)
+            }else{
+              // setUser(null)
+            }
+        }
+
+        
+    
+        // call the fucn
+        getUser();
+
+        // clenn up
+      return () => getUser()
+    }, [dispatch])
+
+    console.log( interestCats )
+
+
   return (
     <React.Fragment>
       <NavbarSignedIn />
@@ -47,13 +80,29 @@ const Home = () => {
             </div>
         </section>
 
+
+            
+          {isLoggedIn ? (
+            interestCats.map(interestCat=>(
+              // console.log(interestCat.category.name)
+              <CoursesRowByCategory 
+                title={`${interestCat.category.name} Courses for you`}
+              />
+            ))
+          ) : (
+            <>
+            <CoursesRowByCategory 
+            title='Because you love Cosmetic Manufacturing'
+          />
+          <CoursesRowByCategory 
+            title='Establish your Business: Marketing Courses to take you to the next level'
+          />
+          </>
+          )}
         
-        <CoursesRowByCategory 
-          title='Because you love Cosmetic Manufacturing'
-        />
-        <CoursesRowByCategory 
-          title='Establish your Business: Marketing Courses to take you to the next level'
-        />
+        
+        
+     
 
 
         <section className='my-5'>
