@@ -14,6 +14,7 @@ import catOrganicSoap from '../assets/images/organic-soap.jpg'
 const CategoryCard2 = ({id}) => {
     const [img, setImg] = useState('');
     const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
 
     useEffect(() => {
      
@@ -21,35 +22,44 @@ const CategoryCard2 = ({id}) => {
             switch (id) {
                 case 'cat1':
                     setImg(catOrganicSoap)
-                    setTitle('Organic Skin Care Manufacturing')
+                    setTitle('Organic Skin Care Manufacturing');
+                    setDescription('Looking to use natural ingredients to make soaps that has healing prosperities? This course teaches you all the details on Ingredients and how to make perfect organic skin care products')
+
                     break;
                 case 'cat2':
                     setImg(catCosmetic)
                     setTitle('Cosmetic Manufacturing')
+                    setDescription('Realize your dream of starting your own cosmetics business through this course. Covers all you need to start and run homemade cosmetics business')
                     break;
                 case 'cat3':
                     setImg(cleaningAgent)
                     setTitle('Cleaning Agents Manufacturing')
+                    setDescription('Looking to learn how to produce various types and grades of cleaning agents? This course shows you exactly how')
                     break;
                 case 'cat4':
                     setImg(catSoap)
                     setTitle('Soap & Detergents Manufacturing')
+                    setDescription('This course teaches you all you need to know about detergents and soaps manufacturing from small scale to large scale as well as gives you access to the resources needed to run successful Soapmaking business')
                     break;
                 case 'cat5':
                     setImg(catCulinary)
                     setTitle('Culinary & Catering Business')
+                    setDescription('Food business is a lucrative venture that can give very good returns within a short period. Learn about how to design recipes and brand your food business')
                     break;
                 case 'cat6':
                     setImg(catBranding)
                     setTitle('Business Branding & Communication')
+                    setDescription('Breif description')
                     break;
                 case 'cat7':
                     setImg(catMarketing)
                     setTitle('Marketing & Business Development')
+                    setDescription('Breif description')
                     break;
                 default:
                     setTitle('No Title')
                     setImg(soapImage)
+                    setDescription('Breif cat description')
                     break;
             }
         }
@@ -78,7 +88,7 @@ const CategoryCard2 = ({id}) => {
                     className="transition-all transform translate-y-8 opacity-0  group-hover:opacity-100 group-hover:translate-y-0"
                 >
                     <p className="text-sm text-white">
-                        brief Cat description
+                        {description}
                     </p>
                 </div>
                 </div>
