@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DynamicCategoryHero = ({catName, catImage}) => {
+const DynamicCategoryHero = ({catName, catImage, catDescription}) => {
   return (
     <section class="relative bg-white">
             <img
@@ -25,11 +25,11 @@ const DynamicCategoryHero = ({catName, catImage}) => {
                     </h1>
 
                 <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!
+                    {catDescription}
                 </p>
 
                 <div class="flex flex-wrap gap-4 mt-8 text-center">
-                    <Link to='/get-started' class="block w-full px-12 py-2 text-sm sm:text-lg font-bold text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring" >
+                    <Link to='/signin' class="block w-full px-12 py-2 text-sm sm:text-lg font-bold text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring" >
                         Start Learning
                     </Link>
 
