@@ -19,7 +19,7 @@ const AccountInput = ({
             placeholder={placeholder || ''}
             required={required}
             title={title}
-            onChange={(e)=>onChange}
+            onChange={(e)=>onChange(e.target.value)}
             value={value}
         />
     </div>
