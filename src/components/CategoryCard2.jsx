@@ -49,12 +49,12 @@ const CategoryCard2 = ({id}) => {
                 case 'cat6':
                     setImg(catBranding)
                     setTitle('Business Branding & Communication')
-                    setDescription('Breif description')
+                    setDescription('Do you have a perfect product? This course teaches you how to communicate your uniqueness to your target audience. You will learn the perfect channels to reach your audience and how to make your products stand out')
                     break;
                 case 'cat7':
                     setImg(catMarketing)
                     setTitle('Marketing & Business Development')
-                    setDescription('Breif description')
+                    setDescription('Take your business to the next level through these world class Marketing and business development masterclasses')
                     break;
                 default:
                     setTitle('No Title')

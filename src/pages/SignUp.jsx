@@ -8,13 +8,78 @@ import SubmitButton from '../components/Accounts/SubmitButton';
 import OrDivider from '../components/Accounts/OrDivider';
 import { useState } from 'react';
 import Footer from '../components/Footer';
+import { useDispatch } from 'react-redux';
+import { signupUser } from '../redux/userSlice';
 
 
 
 const SignUp = () => {
-    const [signUpWith, setSignUpWith] = useState('');
+    const dispatch = useDispatch();
 
-    console.log(signUpWith)
+    const [signUpWith, setSignUpWith] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState();
+
+    const [loggingIn, setLoggingIn] = useState("");
+    const [error, setError] = useState('')
+
+
+    const onSubmitHandler = async(e) => {
+        e.preventDefault()
+        setLoggingIn(true)
+        setError('')
+        if(signUpWith === 'phone'){
+            const response = await dispatch(signupUser({
+                type:'phone',
+                phoneNumber,
+                firstName,
+                lastName,
+                password
+            })).unwrap();
+
+            if(response.status === 200){
+                console.log('sign up successfull, proceeding to select interests');
+                window.location.href='/interests'
+            }else if(response.status === 400){
+                setError(response.message)
+            }else {
+                setError(response.message)
+            }
+
+            console.log(response)
+
+        } else if (signUpWith === 'email') {
+            const response = await dispatch(signupUser({
+                type:'email',
+                email,
+                firstName,
+                lastName,
+                password
+            })).unwrap();
+
+            if(response.status === 200){
+                console.log('sign up successfull, proceeding to select interests');
+                window.location.href='/interests'
+            }else if(response.status === 400){
+                setError(response.message)
+            }else{
+                setError(response.message)
+            }
+        }
+        setLoggingIn(false)
+
+
+        // console.log(firstName, lastName, email, phoneNumber, password)
+
+
+    }
+
+
+    // console.log(signUpWith)
+    // console.log(password)
 
   return (
     <React.Fragment>
@@ -46,25 +111,25 @@ const SignUp = () => {
             {/* conditional render base on either phone or email */}
 
             { signUpWith !=='' && 
-            <form className='mt-[20px]' >
+            <form className='mt-[20px]'  onSubmit={onSubmitHandler}>
                 <div className="grid grid-cols-2 gap-2 sm:gap-4">
                 <AccountInput  
                     name='firstName'
                     type='text'
                     placeholder='First Name'
-                    required={false}
+                    required={true}
                     title='Please enter your first name'
-                    // value={}
-                    // onChange={}
+                    value={firstName}
+                    onChange={e=>setFirstName(e)}
                 />
                 <AccountInput  
                     name='lastName'
                     type='text'
                     placeholder='Last Name'
-                    required={false}
+                    required={true}
                     title='Please enter your last name'
-                    // value={}
-                    // onChange={}
+                    value={lastName}
+                    onChange={(e)=>setLastName(e)}
                 />
                 </div>
 
@@ -73,20 +138,21 @@ const SignUp = () => {
                         name='phoneNumber'
                         type='text'
                         placeholder='Phone Number'
-                        required={false}
-                        title='Please enter a valid phone number'
-                        // value={}
-                        // onChange={}
+                        pattern="[0]{1}[0-9]{9}"
+                        required={true}
+                        title='Please enter a valid phone number starting with 0 and of length 10'
+                        value={phoneNumber}
+                        onChange={e=>setPhoneNumber(e)}
                     /> 
                     : 
                     <AccountInput  
                         name='email'
                         type='email'
                         placeholder='Email'
-                        required={false}
+                        required={true}
                         title='Please enter a valid email'
-                        // value={}
-                        // onChange={}
+                        value={email}
+                        onChange={e=>setEmail(e)}
                     /> 
                 }
 
@@ -98,14 +164,14 @@ const SignUp = () => {
                     placeholder='Password'
                     required={true}
                     title='Please enter a valid password'
-                    // value={}
-                    // onChange={}
+                    value={password}
+                    onChange={(e)=>setPassword(e)}
                 />
 
                 
-            
+                <p className='mt-3 text-center text-sm text-red-700'>{error}</p>
                 <div className=" mt-3 mb-10 sm:mb-0">
-                    <Link to='/interests'><SubmitButton  name='Create Account'/></Link>
+                    <SubmitButton   name= {loggingIn ? 'Creating Account' : 'Create Account'} />
                     <p className='text-center mt-2'>Already have an Account? <Link to='/signin'><span className='font-bold text-secondaryBlue'>Sign In</span></Link></p>
                 </div>
             </form>
