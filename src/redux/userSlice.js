@@ -107,6 +107,7 @@ reducers: {
         state.user = {};
         state.isLoggedIn = false;
         localStorage.clear();
+        localStorage.removeItem('userToken')
         window.location.href='/'
         },
     
