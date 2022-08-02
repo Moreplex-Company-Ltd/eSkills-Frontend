@@ -11,6 +11,7 @@ import screenshot1 from '../assets/images/screenshot-home.jpg'
 import TopCategoryRows from '../components/TopCategoryRows';
 import LinkButton from '../components/uis/LinkButton';
 import LandingCarouselSections2 from '../components/sections/LandingCarouselSections2';
+// import LandingCarouselSections from "../components/sections/LandingCarouselSections";
 
 const Landing = () => {
   return (
@@ -18,6 +19,7 @@ const Landing = () => {
         <NavbarDefault />
         <section className='pt-14'>
             <LandingCarouselSections2 />
+
             <section className="bg-white ">
                 <div className="py-12 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto lg:px-40 md:px-20  text-center">
@@ -94,7 +96,7 @@ const Landing = () => {
                         The good news is, you can get started for free
                         Learning without limitations!
                         </p>
-                        <button className='mb-5 rounded text-white font-bold bg-gold px-4 py-2 hover:bg-opacity-90'><Link to='/signin'>Get Started for Free</Link></button>
+                        <button className='mb-5 rounded text-white font-bold bg-gold px-4 py-2 hover:bg-opacity-90'><Link to='/allcourses'>Get Started for Free</Link></button>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mt-8">
                         <img className="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1" />

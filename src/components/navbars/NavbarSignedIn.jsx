@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/moreplex-logo-white.png'
-import avatar from '../../assets/images/background2.jpeg'
+// import avatar from '../../assets/images/background2.jpeg'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOutCurrentUser } from '../../redux/userSlice';
+
+const avatar = "https://res.cloudinary.com/jondexter/image/upload/v1629122461/avatars/user_ywbrdf.png"
 
 
 const NavbarSignedIn = () => {
@@ -18,8 +20,8 @@ const NavbarSignedIn = () => {
 
 
   
-  const onLogoutHandler = () => {
-    dispatch(logOutCurrentUser());
+  const onLogoutHandler = async() => {
+    await dispatch(logOutCurrentUser()).unwrap();
   }
 
 
@@ -76,7 +78,7 @@ const NavbarSignedIn = () => {
             <div className='relative'>
             <button type="button" className="flex  text-sm  rounded-full md:mr-0 border-2 border-white overflow-hidden items-center hover:border-white  focus:ring-white focus:border-white" onClick={()=>setOpenProfileMenu(prev=>!prev)}>
               <span className="sr-only">Open user menu</span>
-              <img className="w-9 h-9 sm:w-10 sm:h-10  rounded-full ring-white object-cover" src={user.avatarURL ||avatar} alt="userphoto" />
+              <img className="w-9 h-9 sm:w-10 sm:h-10  rounded-full ring-white object-cover" src={user?.avatarURL || avatar} alt="userphoto" />
             </button>
 
             {openProfileMenu && 
@@ -85,8 +87,8 @@ const NavbarSignedIn = () => {
             <div className="absolute z-30 right-0 pt-5  bg-gray-100 rounded ">
               <div className='flex justify-center items-center '>
                 <div className='text-center'>
-                  <img className="ml-7 sm:ml-5 w-12 h-12 sm:w-16 sm:h-16 object-center rounded-full ring-white object-cover" src={user.avatarURL || avatar} alt="userphoto" />
-                  <p className='text-sm'>{user.firstName || 'Guest'}</p>
+                  <img className="ml-7 sm:ml-5 w-12 h-12 sm:w-16 sm:h-16 object-center rounded-full ring-white object-cover" src={user?  user.avatarURL : avatar} alt="userphoto" />
+                  <p className='text-sm'>{user ? user.name : 'Guest'}</p>
                   <button className='mt-2 px-3 py-1 sm:py-1.5 bg-primaryBlue text-white rounded hover:opacity-90'><Link to='/profile'>View Profile</Link></button>
                 </div>
               </div>

@@ -2,6 +2,7 @@ import { Pagination } from 'flowbite-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CourseCard from '../components/CourseCard'
+import CourseLoadingCard from '../components/CourseLoadingCard'
 import Footer from '../components/Footer'
 import NavbarSignedIn from '../components/navbars/NavbarSignedIn'
 // import WorkshopCard from '../components/WorkshopCard'
@@ -73,13 +74,13 @@ const AllCourses2 = () => {
                     
                     <div className='grid sm:grid-cols-2 md:grid-cols-4 justify-between gap-6'>
                         <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
+                        <CourseLoadingCard />
+                        <CourseLoadingCard />
+                        <CourseLoadingCard />
+                        <CourseLoadingCard />
+                        <CourseLoadingCard />
+                        <CourseLoadingCard />
+                        <CourseLoadingCard />
                     </div>
                     </div>
 
@@ -143,9 +144,9 @@ const AllCourses2 = () => {
                     
                     <div className='grid grid-cols-1 gap-8'>
                             <CourseCard />
-                            <CourseCard />
-                            <CourseCard />
-                            <CourseCard />
+                            <CourseLoadingCard />
+                            <CourseLoadingCard />
+                            <CourseLoadingCard />
                     </div>
                     </div>
 
