@@ -11,7 +11,7 @@ const CourseCard = () => {
   
   return (
     <div className="h-30 flex flex-col text-gray-900 bg-white rounded-xl drop-shadow-md hover:shadow-xl">
-          <div className="rounded-lg bg-white shadow-md">
+          <div className="rounded-lg bg-white ">
           <div className='flex justify-center items-center'>
           <svg 
             className='absolute fill-black '

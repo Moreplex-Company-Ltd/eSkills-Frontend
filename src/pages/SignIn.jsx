@@ -147,7 +147,7 @@ const SignIn = () => {
             
                 <p className='mt-3 text-center text-sm text-red-700'>{error}</p>
                 <div className=" mt-2 mb-10 sm:mb-0">
-                    <SubmitButton  name= {loggingIn ? 'Loggin In' : 'Log in'} />
+                    <SubmitButton  name= {loggingIn ? 'Loggin In...' : 'Log in'} />
                     <p className='text-center mt-2'>New User? <Link to='/signUp'><span className='font-bold text-secondaryBlue'>Create an Account</span></Link></p>
                 </div>
             </form>

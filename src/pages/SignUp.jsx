@@ -171,7 +171,7 @@ const SignUp = () => {
                 
                 <p className='mt-3 text-center text-sm text-red-700'>{error}</p>
                 <div className=" mt-3 mb-10 sm:mb-0">
-                    <SubmitButton   name= {loggingIn ? 'Creating Account' : 'Create Account'} />
+                    <SubmitButton   name= {loggingIn ? 'Creating Account...' : 'Create Account'} />
                     <p className='text-center mt-2'>Already have an Account? <Link to='/signin'><span className='font-bold text-secondaryBlue'>Sign In</span></Link></p>
                 </div>
             </form>

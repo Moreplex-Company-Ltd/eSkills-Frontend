@@ -92,8 +92,8 @@ const DetailedCategoryPage = (props) => {
             <h1 className='text-lg tracking-tight  sm:text-2xl text-primaryBlue font-bold'>{`${title} Courses`}</h1>
             </div>
             <Carousel>
-                <CoursesRowByCategory />
-                <CoursesRowByCategory />
+                <CoursesRowByCategory loading={true} />
+                <CoursesRowByCategory loading={true}/>
             </Carousel>
             
         </section>

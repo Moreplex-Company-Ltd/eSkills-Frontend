@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOutCurrentUser } from '../../redux/userSlice';
 
-const avatar = 'https://res.cloudinary.com/jondexter/image/upload/v1632645006/avatars/y88ldaq79er8rbfwgoe3.png'
+const avatar = "https://res.cloudinary.com/jondexter/image/upload/v1629122461/avatars/user_ywbrdf.png"
 
 
 const NavbarSignedIn = () => {
@@ -20,8 +20,8 @@ const NavbarSignedIn = () => {
 
 
   
-  const onLogoutHandler = () => {
-    dispatch(logOutCurrentUser());
+  const onLogoutHandler = async() => {
+    await dispatch(logOutCurrentUser()).unwrap();
   }
 
 
@@ -78,7 +78,7 @@ const NavbarSignedIn = () => {
             <div className='relative'>
             <button type="button" className="flex  text-sm  rounded-full md:mr-0 border-2 border-white overflow-hidden items-center hover:border-white  focus:ring-white focus:border-white" onClick={()=>setOpenProfileMenu(prev=>!prev)}>
               <span className="sr-only">Open user menu</span>
-              <img className="w-9 h-9 sm:w-10 sm:h-10  rounded-full ring-white object-cover" src={user? user.avatarURL : avatar} alt="userphoto" />
+              <img className="w-9 h-9 sm:w-10 sm:h-10  rounded-full ring-white object-cover" src={user?.avatarURL || avatar} alt="userphoto" />
             </button>
 
             {openProfileMenu && 

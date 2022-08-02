@@ -31,7 +31,7 @@ const Home = () => {
         const getUser = async () => {
             setIsLoading(true)
             const response = await dispatch(getMe()).unwrap();
-            // console.log(response)
+            console.log(response)
             if(response.status===200){
                 // setUser(response.user)
                 setInterestCats(response.user.interests)
@@ -48,7 +48,7 @@ const Home = () => {
 
         // clenn up
       return () => getUser()
-    }, [dispatch])
+    }, [ ])
 
     console.log( interestCats )
     console.log(Object.keys(interestCats).length)
