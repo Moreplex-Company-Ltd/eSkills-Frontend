@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavbarSignedIn from '../components/navbars/NavbarSignedIn'
 import DefaultHero from '../components/uis/DefaultHero'
 
 import avatar from '../assets/images/background2.jpeg'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import { useDispatch } from 'react-redux';
+import { getMe } from '../redux/userSlice';
+
+
+
+
 
 const RenderItem = ({title, value}) =>{
     return (
@@ -24,6 +30,31 @@ const RenderItem = ({title, value}) =>{
 }
 
 const Profile = () => {
+    const dispatch = useDispatch()
+
+    const [user, setUser] = useState();
+
+
+    useEffect(() => {
+  
+        const getUser = async () => {
+            const response = await dispatch(getMe()).unwrap();
+            console.log(response)
+            if(response.status===200){
+                setUser(response.user)
+            }
+        }
+    
+        // call the fucn
+        getUser();
+
+        // clenn up
+      return () => getUser()
+    }, [dispatch])
+
+
+
+
   return (
     <React.Fragment>
         <NavbarSignedIn />
@@ -38,12 +69,13 @@ const Profile = () => {
                 <div className='grid grid-cols-1 sm:grid-cols-3 mt-5   gap-5'>
 
                     <div className='flex flex-col border border-gold h-full  items-center bg-white rounded-lg shadow-sm py-10'>
-                        <img className="w-32 h-32 sm:w-40 sm:h-40  rounded-full ring-white object-cover" src={avatar} alt="userphoto" />
+                        <img className="w-32 h-32 sm:w-40 sm:h-40  rounded-full ring-white object-cover" src={user?.avatarURL || avatar} alt="userphoto" />
                         <div className=' mt-5 flex flex-col justify-around gap-1'>
-                            <p className='font-light'>Name: <span>Kofi Mensah</span></p>
-                            <p>Email: <span>kofimensah@gmail.com</span></p>
-                            <p>Account verified: <span>No</span></p>
-                            <p>Date joined: <span>20/07/2022</span></p>
+                            <p className='font-bold'>Name: <span className='font-light'>{user?.firstName.concat(' ', user?.lastName) || 'Guest'}</span></p>
+                            { user?.email && <p className='font-bold'>Email: <span className='font-light'>{user.email}</span></p>}
+                            { user?.phoneNumber && <p className='font-bold'>Phone Number: <span className='font-light'>{user.phoneNumber}</span></p>}
+                            <p className='font-bold'>Account verified: <span className='font-light'>{user?.accountVerified ? 'Yes' : 'No'}</span></p>
+                            <p className='font-bold'>Date joined: <span className='font-light'>{user?.created_at }</span></p>
                         </div>
                        
                         <div className=' mt-6 '>
@@ -54,9 +86,12 @@ const Profile = () => {
                     <div className='col-span-2 bg-white rounded-lg shadow-sm flex  justify-between  pt-10 border border-gold mr-5 sm:mr-0 '>
                         
                         <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 px-5 mb-9'>
-                            <RenderItem title='COURSES ENROLLED' value={5} />
+                            <RenderItem title='COURSES ENROLLED' value={0} />
                             <RenderItem title='COURSES COMPLETED' value={0} />
+                            {/* <RenderItem title='COURSES COMPLETED' value={0} /> */}
                         </div>
+
+                        
                         
                         
 

@@ -24,6 +24,15 @@ import SignUp from "./pages/SignUp";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Try from "./pages/Try";
+import store from "./redux/store";
+import { setCurrentUser } from "./redux/userSlice";
+
+const token = localStorage.getItem("userToken");
+if(token){
+  store.dispatch(setCurrentUser(token));
+  
+}
+
 
 function App() {
   return (
