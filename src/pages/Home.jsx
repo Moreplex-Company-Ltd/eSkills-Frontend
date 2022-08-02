@@ -51,7 +51,7 @@ const Home = () => {
     }, [dispatch])
 
     console.log( interestCats )
-
+    console.log(Object.keys(interestCats).length)
 
   return (
     <React.Fragment>
@@ -119,7 +119,18 @@ const Home = () => {
           </>
           )} */}
 
-          <CoursesRowByCategory 
+          {Object.keys(interestCats).length!==0 ? 
+          interestCats.map(interestCat=>
+              <CoursesRowByCategory 
+              key={interestCat.id}
+              id={interestCat.categoryId}
+              title={`${interestCat.category.name} Courses for you`}
+              loading={true}
+            />)
+          :
+           (
+            <>
+            <CoursesRowByCategory 
             title='Because you love Cosmetic Manufacturing'
             loading={true}
           />
@@ -127,6 +138,10 @@ const Home = () => {
             title='Establish your Business: Marketing Courses to take you to the next level'
             loading={true}
           />
+            </>
+           )}
+
+         
         
         
         
