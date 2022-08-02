@@ -7,7 +7,8 @@ const AccountInput = ({
     value,                  //input value
     onChange,               //callback to handle input value change
     title,                  //input title, usually displayed as tooltip or displayed upon error
-    required                //boolean, if required or not
+    required,                //boolean, if required or not
+    pattern
 }) => {
     
   return (
@@ -19,8 +20,9 @@ const AccountInput = ({
             placeholder={placeholder || ''}
             required={required}
             title={title}
-            onChange={(e)=>onChange}
+            onChange={(e)=>onChange(e.target.value)}
             value={value}
+            pattern={pattern}
         />
     </div>
   )

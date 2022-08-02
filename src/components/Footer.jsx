@@ -43,14 +43,16 @@ const Footer = () => {
       </div>
       <hr className='border-gold border-2' />
       <div className='sm:flex justify-between mt-0 pt-2 pb-10'>
-        <div className=''>
-          <p className=' text-center'>&copy; Moreplex Eskills Academy, 2022</p>
-          {/* <p className='text-sm'>Except otherwise stated, contents are licensed under a Creative Commons Attribution 4.0 International license.</p> */}
+        <div className='justify-center text-center sm:text-left'>
+          <p className='text-sm'>&copy; Moreplex Eskills Academy, 2022</p>
+          <p className='text-sm'>Except otherwise stated, contents are licensed under <a  target='_blank' rel='noopener noreferrer' href='https://choosealicense.com/licenses/cc-by-sa-4.0/' className='hover:underline hover:text-gold'>CC BY-SA 4.0</a></p>
         </div>
+
+        
 
         <div className='mt-4 sm:mt-0 flex space-x-2 justify-center '>
           {/* facebook */}
-          <p className='rounded-full bg-white p-1 w-8 h-8 flex justify-center items-center'>
+          <p className='rounded-full bg-white p-1 w-7 h-7 flex justify-center items-center'>
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
               width="24" height="24"
               viewBox="0 0 24 24"
@@ -60,7 +62,7 @@ const Footer = () => {
           </p>
 
           {/* twitter */}
-          <p className='rounded-full bg-white p-1 w-8 h-8 flex justify-center items-center'>
+          <p className='rounded-full bg-white p-1 w-7 h-7 flex justify-center items-center'>
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
             width="30" height="30"
             viewBox="0 0 64 64"
@@ -70,7 +72,7 @@ const Footer = () => {
           </p>
 
           {/* instagram */}
-          <p className='rounded-full bg-white p-1 w-8 h-8 flex justify-center items-center'>
+          <p className='rounded-full bg-white p-1 w-7 h-7 flex justify-center items-center'>
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
             width="30" height="30"
             viewBox="0 0 50 50"
@@ -80,7 +82,7 @@ const Footer = () => {
           </p>
 
           {/* linkedin */}
-          <p className='rounded-full bg-white p-1 w-8 h-8 flex justify-center items-center'>
+          <p className='rounded-full bg-white p-1 w-7 h-7 flex justify-center items-center'>
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
               width="30" height="30"
               viewBox="0 0 30 30"

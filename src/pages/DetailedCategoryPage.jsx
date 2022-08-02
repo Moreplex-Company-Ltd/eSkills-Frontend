@@ -21,6 +21,7 @@ const DetailedCategoryPage = (props) => {
     
     const [img, setImg] = useState('');
     const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
 
     useEffect(() => {
      
@@ -28,35 +29,44 @@ const DetailedCategoryPage = (props) => {
             switch (catID) {
                 case 'cat1':
                     setImg(catOrganicSoap)
-                    setTitle('Organic Skin Care Manufacturing')
+                    setTitle('Organic Skin Care Manufacturing');
+                    setDescription('Looking to use natural ingredients to make soaps that has healing prosperities? This course teaches you all the details on Ingredients and how to make perfect organic skin care products')
+
                     break;
                 case 'cat2':
                     setImg(catCosmetic)
                     setTitle('Cosmetic Manufacturing')
+                    setDescription('Realize your dream of starting your own cosmetics business through this course. Covers all you need to start and run homemade cosmetics business')
                     break;
                 case 'cat3':
                     setImg(cleaningAgent)
                     setTitle('Cleaning Agents Manufacturing')
+                    setDescription('Looking to learn how to produce various types and grades of cleaning agents? This course shows you exactly how')
                     break;
                 case 'cat4':
                     setImg(catSoap)
                     setTitle('Soap & Detergents Manufacturing')
+                    setDescription('This course teaches you all you need to know about detergents and soaps manufacturing from small scale to large scale as well as gives you access to the resources needed to run successful Soapmaking business')
                     break;
                 case 'cat5':
                     setImg(catCulinary)
                     setTitle('Culinary & Catering Business')
+                    setDescription('Food business is a lucrative venture that can give very good returns within a short period. Learn about how to design recipes and brand your food business')
                     break;
                 case 'cat6':
                     setImg(catBranding)
                     setTitle('Business Branding & Communication')
+                    setDescription('Do you have a perfect product? This course teaches you how to communicate your uniqueness to your target audience. You will learn the perfect channels to reach your audience and how to make your products stand out')
                     break;
                 case 'cat7':
                     setImg(catMarketing)
                     setTitle('Marketing & Business Development')
+                    setDescription('Take your business to the next level through these world class Marketing and business development masterclasses')
                     break;
                 default:
                     setTitle('No Title')
                     setImg(soapImage)
+                    setDescription('Breif cat description')
                     break;
             }
         }
@@ -71,6 +81,7 @@ const DetailedCategoryPage = (props) => {
     <React.Fragment>
         <NavbarSignedIn />
         <DynamicCategoryHero 
+            catDescription={description}
             catName={title}
             catImage={img}
         />

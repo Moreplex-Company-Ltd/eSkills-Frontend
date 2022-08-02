@@ -86,8 +86,14 @@ const Landing = () => {
                 <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div className="font-light text-gray-500 sm:text-lg ">
                         <h2 className="mb-4 text-3xl tracking-tight font-bold text-primaryBlue md:text-4xl  ">Learn anywhere, anytime</h2>
-                        <p className="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
-                        <p className='mb-10'>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
+                        <p className="mb-4">
+                        MESA offers you the opportunity to become a skilled artisan anywhere, anytime. With access to the internet, you can close to becoming 21st century skilled artisan.
+                        </p>
+                        <p className='mb-10'>
+                        Broaden your scope, begin a new skill, build your existing skills here!
+                        The good news is, you can get started for free
+                        Learning without limitations!
+                        </p>
                         <button className='mb-5 rounded text-white font-bold bg-gold px-4 py-2 hover:bg-opacity-90'><Link to='/signin'>Get Started for Free</Link></button>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mt-8">
