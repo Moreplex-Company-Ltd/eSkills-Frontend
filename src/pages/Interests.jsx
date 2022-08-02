@@ -10,7 +10,7 @@ import { addMyInterest } from '../redux/userSlice';
 
 const Interests = () => {
     const user = useSelector(state=>state.user.isLoggedIn)
-    console.log(user)
+    // console.log(user)
     const dispatch = useDispatch()
     const [selectedCats, setSelectedCats] = useState([])
 
@@ -28,6 +28,10 @@ const Interests = () => {
 
         const response = await dispatch(addMyInterest({interests: interests})).unwrap();
         console.log(response)
+        if(response.status === 201){
+            window.location.href='/home'
+        } 
+
     }
 
   return (
