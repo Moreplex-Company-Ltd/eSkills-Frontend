@@ -35,7 +35,7 @@ const SingleHero = ({mainText, secondText, img}) => {
                 </p>
 
                 <div className="flex flex-wrap gap-4 mt-8 text-center">
-                    <Link to='/signin' className="block w-full px-12 py-2 text-sm sm:text-lg font-bold text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring" >
+                    <Link to='/allcourses' className="block w-full px-12 py-2 text-sm sm:text-lg font-bold text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring" >
                         Start Learning
                     </Link>
 

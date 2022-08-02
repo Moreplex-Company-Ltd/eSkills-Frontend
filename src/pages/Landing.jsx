@@ -11,6 +11,7 @@ import screenshot1 from '../assets/images/screenshot-home.jpg'
 import TopCategoryRows from '../components/TopCategoryRows';
 import LinkButton from '../components/uis/LinkButton';
 import LandingCarouselSections2 from '../components/sections/LandingCarouselSections2';
+// import LandingCarouselSections from "../components/sections/LandingCarouselSections";
 
 const Landing = () => {
   return (
@@ -18,6 +19,7 @@ const Landing = () => {
         <NavbarDefault />
         <section className='pt-14'>
             <LandingCarouselSections2 />
+
             <section className="bg-white ">
                 <div className="py-12 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto lg:px-40 md:px-20  text-center">
@@ -86,9 +88,15 @@ const Landing = () => {
                 <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div className="font-light text-gray-500 sm:text-lg ">
                         <h2 className="mb-4 text-3xl tracking-tight font-bold text-primaryBlue md:text-4xl  ">Learn anywhere, anytime</h2>
-                        <p className="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
-                        <p className='mb-10'>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
-                        <button className='mb-5 rounded text-white font-bold bg-gold px-4 py-2 hover:bg-opacity-90'><Link to='/signin'>Get Started for Free</Link></button>
+                        <p className="mb-4">
+                        MESA offers you the opportunity to become a skilled artisan anywhere, anytime. With access to the internet, you can close to becoming 21st century skilled artisan.
+                        </p>
+                        <p className='mb-10'>
+                        Broaden your scope, begin a new skill, build your existing skills here!
+                        The good news is, you can get started for free
+                        Learning without limitations!
+                        </p>
+                        <button className='mb-5 rounded text-white font-bold bg-gold px-4 py-2 hover:bg-opacity-90'><Link to='/allcourses'>Get Started for Free</Link></button>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mt-8">
                         <img className="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1" />

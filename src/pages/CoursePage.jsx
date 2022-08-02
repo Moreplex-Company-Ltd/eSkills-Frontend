@@ -11,7 +11,7 @@ import ReviewsTab from '../components/courseVideoPage/tabs/ReviewsTab';
 import DiscussionsTab from '../components/courseVideoPage/tabs/DiscussionsTab'
 import ResourcesTab from '../components/courseVideoPage/tabs/ResourcesTab';
 import LoadingVideo from '../components/courseVideoPage/LoadingVideo'
-import { Accordion } from 'flowbite-react';
+// import { Accordion } from 'flowbite-react';
 
 
 const courseTitle = 'Introduction to Soap Branding: Branding the Perfect Soap'

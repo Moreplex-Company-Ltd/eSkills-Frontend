@@ -1,7 +1,9 @@
 import React from 'react'
 import CourseCard from './CourseCard'
+import CourseLoadingCard from './CourseLoadingCard'
 
 const CoursesRowByCategory = (props) => {
+  console.log(props.id)
   return (
     <React.Fragment>
         {/* mobile; 1 col carousel */}
@@ -12,7 +14,7 @@ const CoursesRowByCategory = (props) => {
           </div>
           <div className='container mx-auto py-5 px-10  '>
             <div className='grid grid-cols-1'>
-              <CourseCard />
+              {props.loading ? <CourseLoadingCard /> : <CourseCard /> }
             </div>
           </div>
         </section>
@@ -25,8 +27,8 @@ const CoursesRowByCategory = (props) => {
           </div>
           <div className='mx-auto py-5 px-10  '>
             <div className='flex justify-between gap-5'>
-              <CourseCard />
-              <CourseCard />
+              {props.loading ? <CourseLoadingCard /> : <CourseCard /> }
+              {props.loading ? <CourseLoadingCard /> : <CourseCard /> }
             </div>
           </div>
         </section>
@@ -40,10 +42,10 @@ const CoursesRowByCategory = (props) => {
           </div>
           <div className='container mx-auto py-5 px-0  '>
             <div className='grid grid-cols-4 gap-5'>
-              <CourseCard />
-              <CourseCard />
-              <CourseCard />
-              <CourseCard />
+            {props.loading ? <CourseLoadingCard /> : <CourseCard /> }
+            {props.loading ? <CourseLoadingCard /> : <CourseCard /> }
+            {props.loading ? <CourseLoadingCard /> : <CourseCard /> }
+            {props.loading ? <CourseLoadingCard /> : <CourseCard /> }
             </div>
           </div>
         </section>
