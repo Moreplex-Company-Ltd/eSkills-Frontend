@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import NavbarSignedIn from '../components/navbars/NavbarSignedIn'
 import DefaultHero from '../components/uis/DefaultHero'
 
-import avatar from '../assets/images/background2.jpeg'
+// import avatar from '../assets/images/background2.jpeg'
 import Footer from '../components/Footer';
 import { useDispatch } from 'react-redux';
 import { getMe } from '../redux/userSlice';
+
+
+const avatar = 'https://res.cloudinary.com/jondexter/image/upload/v1632645006/avatars/y88ldaq79er8rbfwgoe3.png'
 
 
 
