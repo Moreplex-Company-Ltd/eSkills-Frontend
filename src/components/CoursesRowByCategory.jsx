@@ -3,6 +3,7 @@ import CourseCard from './CourseCard'
 import CourseLoadingCard from './CourseLoadingCard'
 
 const CoursesRowByCategory = (props) => {
+  console.log(props.id)
   return (
     <React.Fragment>
         {/* mobile; 1 col carousel */}
