@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import CourseLoadingCard from '../components/CourseLoadingCard';
 import CoursesRowByCategory from '../components/CoursesRowByCategory';
 import Footer from '../components/Footer';
 
@@ -9,9 +10,18 @@ import CarouselSections from '../components/sections/CarouselSections';
 import { getMe } from '../redux/userSlice';
 
 
+const RenderLoading = () => {
+  return (
+    <div className='container mx-auto py-5 px-0'>
+        <CourseLoadingCard />
+    </div>
+  )
+}
+
 const Home = () => {
     const dispatch = useDispatch()
     const isLoggedIn = useSelector(state=>state.user.isLoggedIn)
+    const [isLoading, setIsLoading] = useState(false);
     // const [user, setUser] = useState();
     const [interestCats, setInterestCats] = useState({});
 
@@ -19,11 +29,13 @@ const Home = () => {
     useEffect(() => {
   
         const getUser = async () => {
+            setIsLoading(true)
             const response = await dispatch(getMe()).unwrap();
             // console.log(response)
             if(response.status===200){
                 // setUser(response.user)
                 setInterestCats(response.user.interests)
+                setIsLoading(false)
             }else{
               // setUser(null)
             }
@@ -82,23 +94,39 @@ const Home = () => {
 
 
             
-          {isLoggedIn ? (
-            interestCats.map(interestCat=>(
-              // console.log(interestCat.category.name)
-              <CoursesRowByCategory 
-                title={`${interestCat.category.name} Courses for you`}
-              />
-            ))
-          ) : (
+          {/* {(interestCats.length!==0) ? 
+            // interestCats.map(interestCat=>
+            //   <CoursesRowByCategory 
+            //   title={`${interestCat.category.name} Courses for you`}
+            // />)
+            // (console.log(interestCats[]))
+
+            // <p>hel</p>
+              
+            
+            
+            // <RenderLoading />
+           : (
             <>
             <CoursesRowByCategory 
             title='Because you love Cosmetic Manufacturing'
+            loading={true}
           />
           <CoursesRowByCategory 
             title='Establish your Business: Marketing Courses to take you to the next level'
+            loading={true}
           />
           </>
-          )}
+          )} */}
+
+          <CoursesRowByCategory 
+            title='Because you love Cosmetic Manufacturing'
+            loading={true}
+          />
+          <CoursesRowByCategory 
+            title='Establish your Business: Marketing Courses to take you to the next level'
+            loading={true}
+          />
         
         
         
