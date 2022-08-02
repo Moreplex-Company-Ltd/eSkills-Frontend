@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/moreplex-logo-white.png'
-import avatar from '../../assets/images/background2.jpeg'
+// import avatar from '../../assets/images/background2.jpeg'
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOutCurrentUser } from '../../redux/userSlice';
+
+const avatar = 'https://res.cloudinary.com/jondexter/image/upload/v1632645006/avatars/y88ldaq79er8rbfwgoe3.png'
 
 
 const NavbarSignedIn = () => {
