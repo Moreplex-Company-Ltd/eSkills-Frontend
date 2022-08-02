@@ -11,6 +11,7 @@ import ReviewsTab from '../components/courseVideoPage/tabs/ReviewsTab';
 import DiscussionsTab from '../components/courseVideoPage/tabs/DiscussionsTab'
 import ResourcesTab from '../components/courseVideoPage/tabs/ResourcesTab';
 import LoadingVideo from '../components/courseVideoPage/LoadingVideo'
+import RenderVideoPlayer from '../components/courseVideoPage/RenderVideoPlayer';
 // import { Accordion } from 'flowbite-react';
 
 
@@ -40,7 +41,9 @@ const CoursePage = () => {
                     <div className='flex mx-5 mt-2border border-green-700'>
                         <div className='w-[75%] h-[560px]  border border-black'>
                             {/* <img src={ladyOnPhone} alt='immg'  className='object-fill w-full h-full'/> */}
-                            <LoadingVideo />
+                            {/* <LoadingVideo /> */}
+                            <RenderVideoPlayer />
+
                         </div>
                         <div className='w-[25%] py-0 h-[560px] overflow-y-scroll '>
                             <p className='text-center font-extrabold text-lg mb-4'>9 Sections (2h:45m)</p>
